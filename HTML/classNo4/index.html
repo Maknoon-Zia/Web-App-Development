@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>class no 4</title>
+</head>
+<body>
+    <form style="border: 1px solid">
+    <h1>Registeration form</h1>
+    <!-- form is self close tag  -->
+    <!-- <fieldset> -->
+        <!-- <legend>Registeration Form</legend> -->
+        <!-- method attribute mostly use in background developement get(public) lyna post(private) bnana create kerna -->
+        <!-- place holder is a attribute to represent purpose -->
+         <!-- maxlength defines length of characters -->
+          <!-- size pehly use hota tha old version now use maxlength -->
+           <!-- chosse one label or placeholder -->
+            <label>Name</label>
+        <input type="text" placeholder="Amna" maxlength="3" required="required"> 
+        <!-- required to must enter input from user -->
+        <br/>
+        <br/>
+        <!-- minlength defines minimum length -->
+        <label>Password</label>
+        <input type="password" placeholder="01234567"  minlength="8" required="required">
+        <br/>
+        <input type="email"  placeholder="01234567" required="required">
+        <br/>
+        <input type="file" required="required">
+        <br/>
+        <br/>
+        <input type="number" placeholder="Age" required="required">
+        <br/>
+        <br/>
+        <input type="date" required="required">
+        <br/>
+        <br/>
+        <!-- textarea for discription not contain height width attribute in html but can be in styling-->
+         <textarea placeholder="Description"></textarea>
+         <br/>
+         <!-- radiobutton use for select only one from many -->
+          <!-- <input type="radio" value="Male"> Male -->
+          <input type="radio" > Male
+          <input type="radio" > Female
+          <br/>
+          <label>Muslim</label>
+          <input type="checkbox" > 
+          <!-- check box use for selection of many -->
+           <br/>
+           <!-- selection box Dropdown menu-->
+            <select>
+                <option>Please Select</option>
+                <option>Section 1</option>
+                <option>Section 2</option>
+                <option>Section 3</option>
+            </select>
+        <input type="submit">
+    </form>
+</body>
+</html>
