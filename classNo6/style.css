@@ -1,0 +1,41 @@
+
+h1, h2, h3{
+    color: beige;
+    background-color: black;
+}
+.head1, .head2, .head3{
+    color:pink;
+    background-color: skyblue;
+}
+/* read line by line */
+.head1, .head2, .head3{
+    color:red;
+    background-color: beige;
+}
+/* #section1{
+    color:white;
+    background-color: black;
+    font-size: 30px;
+}
+#section1 h1{
+    font-size: 50px;
+} */
+#section1{
+    color:white;
+    background-color: black;
+    font-size: 30px;
+    /* space from outside */
+    margin-top: 100px;
+    margin-left: 100px;
+    margin-right:100px ;
+    /* space from inside */
+    padding-top: 100px;
+    padding-right: 100px;
+    padding-left: 100px;
+    padding-bottom: 100px;
+    /* boarder after margin before pading */
+    border: 10px solid red;
+}
+body{
+    background-color: rgb(177, 86, 86);
+}
