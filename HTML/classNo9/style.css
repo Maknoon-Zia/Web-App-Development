@@ -1,0 +1,43 @@
+/* body styling */
+/* colors:  rgb(51, 187, 247) , rgb(3, 3, 3)*/
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(51, 187, 247);
+}
+
+ul {
+    margin: 0;
+    list-style: none;
+    background-color: rgb(3, 3, 3);
+    color: white;
+}
+
+ul li {
+    display: inline-block;
+    padding: 10px;
+}
+
+ul li:hover {
+    color: rgb(3, 3, 3);
+    background-color: white;
+}
+.dropdown{
+    display: none;
+}
+
+ul li:hover .dropdown {
+    display: inline-block;
+    position: absolute;
+    margin: 0%;
+    padding: 0%;
+}
+.dropdown ul li{
+    margin: 0%;
+    padding: 0%;
+    display: block ;
+}
+.dropdown ul li:hover {
+    color: rgb(3, 3, 3);
+    background-color: white;
+}
