@@ -1,0 +1,35 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+body{
+    margin:0;
+    padding: 0;
+    background-color: rgb(249, 233, 222);
+}
+ul{
+    list-style-type: none;
+    background-color:rgb(62, 81, 114);
+    padding: 18px;
+}
+ul li{
+    display: inline;
+    font-size: 30px;
+    padding: 18px;
+    text-align: center;
+    background-color: rgb(62, 81, 114);
+    color: aliceblue;
+
+}
+a{
+    text-decoration: none;
+    color: aliceblue;
+    font-size: 18px;
+    padding: 15px;
+    
+}
+ul span li:hover{
+    background-color: rgb(159, 182, 195);
+    padding: 10px;
+    
+}
