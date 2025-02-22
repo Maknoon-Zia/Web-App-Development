@@ -22,7 +22,8 @@ ul li:hover {
     color: rgb(3, 3, 3);
     background-color: white;
 }
-.dropdown{
+
+.dropdown {
     display: none;
 }
 
@@ -32,47 +33,57 @@ ul li:hover .dropdown {
     margin: 0px;
     padding: 8px;
 }
-.dropdown ul li{
-    display: block ;
+
+.dropdown ul li {
+    display: block;
     margin: 0%;
     padding: 0%;
 }
+
 .dropdown ul li:hover {
     color: rgb(3, 3, 3);
     background-color: white;
 }
-.dropdown2{
+
+.dropdown2 {
     display: none;
 }
+
 .dropdown li:hover .dropdown2 {
     display: inline-block;
     position: absolute;
     margin: 0%;
     padding: 0%;
 }
-.dropdown2 ul li{
-    display: block ;
+
+.dropdown2 ul li {
+    display: block;
     margin: 0%;
     padding: 0%;
 }
+
 .dropdown2 ul li:hover {
     color: rgb(3, 3, 3);
     background-color: white;
 }
-.dropdown3{
+
+.dropdown3 {
     display: none;
 }
+
 .dropdown2 li:hover .dropdown3 {
     display: inline-block;
     position: absolute;
     margin: 0%;
     padding: 0%;
 }
-.dropdown3 ul li{
-    display: block ;
+
+.dropdown3 ul li {
+    display: block;
     margin: 0%;
     padding: 0%;
 }
+
 .dropdown3 ul li:hover {
     color: rgb(3, 3, 3);
     background-color: white;
