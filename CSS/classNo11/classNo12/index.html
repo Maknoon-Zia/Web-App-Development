@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class no 12</title>
+    <style>
+        h2{
+            /* position ki property k sth left right bottom ki property use hoti h  */
+            position: sticky;
+            top: 0px;
+            background-color: black;
+            color: white;
+        }
+        p{
+            position:fixed;
+            left: 100px;
+            top:100px;
+        }
+        /* relative depend upon page and absolute depend upon relative 
+            relative is parent of absolute */
+        .relative{
+            position: relative;
+            background-color: plum;
+            width: 50%;
+            height: 20vh;
+
+            /* padding: 50px;; */
+        }
+        .absolute{
+            /* border: 1px solid red; */
+            position: absolute;
+            width: 50%;
+            height: 20vh;
+            top: 10px;
+            background-color: rgb(192, 175, 192);
+        }
+    </style>
+<body>
+    <h2>Sticky Heading</h2>
+    <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Exercitationem, accusantium illum itaque dicta vitae praesentium nisi possimus quas voluptatibus provident eaque quibusdam neque sequi aspernatur blanditiis ducimus commodi soluta fuga!
+    </p>
+    <h1>Heading</h1>
+    <h1>Heading</h1>
+    <h1>Heading</h1>
+    <h1>Heading</h1>
+    <h1>Heading</h1>
+    <h1>Heading</h1>
+    <h1>Heading</h1>
+    <h1>Heading</h1>
+    <h1>Heading</h1>
+    <h1>Heading</h1>
+    <h1>Heading</h1>
+    <h1>Heading</h1>
+    <h1>Heading</h1>
+    <h1>Heading</h1>
+    <h1>Heading</h1>
+    <div class="relative">This div element has position: relative;
+        <div class="absolute">This div element has position: absolute;</div>
+      </div>
+      
+</body>
+</html>

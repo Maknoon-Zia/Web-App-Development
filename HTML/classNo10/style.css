@@ -1,10 +1,11 @@
 body {
     display: inline;
-    background-color:rgb(251, 251, 251);
+    background-color: rgb(251, 251, 251);
    
 }
-.content{
-    
+
+.content {
+
     height: 30%;
     width: 40%;
     margin-top: 18px;
@@ -13,36 +14,42 @@ body {
     padding-right: 40px;
     padding-bottom: 68px;
     padding-top: 30px;
-   background-color: rgb(253, 249, 225);
+    background-color: rgb(253, 249, 225);
     float: left;
 }
-.content image{
+
+.content image {
     display: inline;
 }
-.icon-section1{
-   display: block;
-   float: left;
+
+.icon-section1 {
+    display: block;
+    float: left;
 
 }
-.icon-section1 icon{
+
+.icon-section1 icon {
     gap: 30px;
 }
-.icon-section2{
+
+.icon-section2 {
     padding-right: 100px;
     display: block;
     float: right;
 }
-.icon{
+
+.icon {
     display: flex;
     gap: 20px;
 }
-.icon i{
+
+.icon i {
     background-color: rgb(248, 242, 222);
 
 }
 
 
-.image img{
+.image img {
     width: 675px;
     height: 416px;
 }

@@ -1,0 +1,38 @@
+<!-- after media quieries rdm  or rem or percentage for responsive website -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    div{
+        width: 20%;
+        height: 50vh;
+        background-color: green;
+        animation-name: colorChanging;
+        animation-duration: 5s;
+        animation-iteration-count: 3;
+    }
+    @keyframes colorChanging{
+        from{
+            background-color: red;
+        }
+        to{ 
+            width: 500px;
+            background-color: purple;
+        }
+    }
+    h1{
+        animation-name: colorChanging;
+        animation-duration: 5s;
+    }
+</style>
+<body>
+    <div>
+
+    </div>
+    <h1>Color Changing</h1>
+</body>
+</html>

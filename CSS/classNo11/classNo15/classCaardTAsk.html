@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: black;
+        }
+        .container{
+            display: flex;
+            gap: 10px;
+        }
+        .container1{
+            display: flex;
+            gap: 10px;
+        }
+        .container2{
+            display: flex;
+            gap: 10px;
+        }
+        .card {
+            padding: 5px;
+            width: 100%;
+            background-color: rgb(20, 20, 20);
+            color: white;
+        }
+
+        .date {
+            color: purple;
+        }
+        @media screen and (max-width: 760px) {
+            .container{
+                flex-direction: column;
+            }
+        }
+        @media screen and (max-width: 450px) {
+            .container1{
+                flex-direction: column;
+            }
+            .container2{
+                flex-direction: column;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="container1">
+        <div class="card">
+            <h1>Card One</h1>
+            <p class="date">May 28, 2025</p>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim reprehenderit aut sapiente! Provident
+                cumque voluptates ducimus in, amet porro incidunt culpa aspernatur voluptatem consequuntur dolores
+                deserunt ipsam? Veniam, voluptatum earum!</p>
+        </div>
+        <div class="card">
+            <h1>Card Two</h1>
+            <p class="date">May 28, 2025</p>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim reprehenderit aut sapiente! Provident
+                cumque voluptates ducimus in, amet porro incidunt culpa aspernatur voluptatem consequuntur dolores
+                deserunt ipsam? Veniam, voluptatum earum!</p>
+        </div>
+    </div>
+    <div class="container2">
+        <div class="card">
+            <h1>Card Three</h1>
+            <p class="date">May 28, 2025</p>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim reprehenderit aut sapiente! Provident
+                cumque voluptates ducimus in, amet porro incidunt culpa aspernatur voluptatem consequuntur dolores
+                deserunt ipsam? Veniam, voluptatum earum!</p>
+        </div>
+        <div class="card">
+            <h1>Card Four</h1>
+            <p class="date">May 28, 2025</p>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim reprehenderit aut sapiente! Provident
+                cumque voluptates ducimus in, amet porro incidunt culpa aspernatur voluptatem consequuntur dolores
+                deserunt ipsam? Veniam, voluptatum earum!</p>
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>

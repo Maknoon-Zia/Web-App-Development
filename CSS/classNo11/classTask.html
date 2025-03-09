@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Task</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            background-color: rgb(159, 230, 224);
+        }
+
+        form {
+            padding: 50px;
+            margin: 0% auto;
+            margin-top: 100px;
+            justify-items: center;
+            width: 20%;
+            height: 45%;
+            text-align: center;
+            border-radius: 20px;
+            border-radius: 20px;
+            border-radius: 20px;
+            background: #f6f4f4;
+            box-shadow: 6px 6px 6px #e2e0e0,
+                -6px -6px 6px #ffffff;
+        }
+
+        button {
+            background-color: rgb(159, 230, 224);
+            padding: 10px;
+            font-weight: 800;
+            width: 120px;
+            border-radius: 30px;
+        }
+
+        input {
+            border: none;
+            padding: 5px;
+            background-color: #e2e0e0;
+            border-radius: 10px;
+        }
+
+        .icon {
+            font-size: 30px;
+            color: #e2e0e0;
+        }
+        .name input{
+            background-image: url('./user-solid.svg');
+            background-repeat: no-repeat;
+            /* background size width height */
+            background-position: left;
+            background-size: 10px 15px; 
+        }
+        /* .name{
+            image 
+            possition 
+            repeat
+
+            input:focus{
+            outline: none}
+        } */
+    </style>
+</head>
+
+
+<body>
+    <form>
+        <h1>Register Here</h1>
+        <div class="icon">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-google"></i>
+        </div>
+        <br />
+        <div class="name">
+            <!-- <i class="fa-solid fa-user"></i> -->
+            <input type="text">
+        </div>
+        <br />
+        <div class="email">
+            <i class="fa-solid fa-envelope"></i>
+            <input type="email" placeholder="Email">
+        </div>
+        <br />
+        <div class="password">
+            <i class="fa-solid fa-lock"></i>
+            <input type="password" placeholder="Password">
+        </div>
+        <br />
+        <button>Register</button>
+    </form>
+</body>
+
+</html>
