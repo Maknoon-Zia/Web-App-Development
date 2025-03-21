@@ -66,7 +66,7 @@
 
 .nav-right {
     padding-left: 220px;
-    padding-right: 15px;
+    padding-right: 15px; 
 }
 
 .nav-right i {
@@ -212,31 +212,32 @@
 } */
 
 .about-content {
-    padding: 100px;
     display: flex;
+    padding-block: 100px;
+    justify-content: center;
 }
 
 .div-left img {
-    width: 550px;
-    height: 380px;
+    width: 600px;
+    height: 420px;
     border: 1px solid none;
     border-radius: 20px;
     object-fit: cover;
 }
 
 .div-right {
-    padding-left: 100px;
+    padding-left: 70px;
     display: flex;
     flex-direction: column;
-    gap: 25px;
-    width: 450px;
+    gap: 35px;
+    width: 550px;
     color: white;
 }
 
 .hero-content {
     display: flex;
     background-color: var(--green-color);
-    width: 450px;
+    width: 550px;
     height: 150px;
     align-items: center;
     padding: 10px;
@@ -249,6 +250,7 @@
     color: white;
     font-size: 50px;
     padding-right: 20px;
+    line-height: 20px;
 }
 
 .hero-content img {
@@ -274,7 +276,7 @@
 }
 
 .bottom-content p {
-    font-size: 20px;
+    font-size: 22px;
     color: var(--font-gray);
 }
 
