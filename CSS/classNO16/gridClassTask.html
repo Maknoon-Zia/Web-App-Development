@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GRID</title>
+    <style>
+        .container {
+            display: grid;
+            grid-template-columns: auto auto auto;
+            gap: 5px;
+        }
+
+        .box1,
+        .box2,
+        .box3,
+        .box4,
+        .box5,
+        .box6,
+        .box7,
+        .box8,
+        .box9,
+        .box10,
+        .box11,
+        .box12 {
+            width: 100%;
+            height: 40vh;
+        }
+
+        .box1 {
+            background-color: rgb(165, 192, 204);
+        }
+
+        .box2 {
+            background-color: rgb(170, 180, 224);
+        }
+
+        .box3 {
+            background-color: rgb(120, 134, 200);
+            grid-column-start: 3;
+            grid-row: 1 / span 2;
+            height: 526px;
+        }
+
+        .box4 {
+            background-color: rgb(44, 50, 108);
+        }
+
+        .box5 {
+            background-color: rgb(7, 9, 88);
+        }
+
+        .box6 {
+            background-color: rgb(170, 180, 224);
+            grid-column: 1 / span 2;
+        }
+
+        .box7 {
+            background-color: rgb(7, 9, 88);
+            grid-column: 1 / span 3;
+        }
+
+        .box8 {
+            background-color: rgb(120, 134, 200);
+            grid-column-start: 1;
+            grid-row: 5 / span 6;
+            height: 526px;
+        }
+
+        .box9 {
+            background-color: rgb(165, 192, 204);
+            height: 526px;
+            grid-column: 2 / span 2;
+            grid-row: 5 / span 6;
+        }
+
+        .box10 {
+            background-color: rgb(44, 50, 108);
+        }
+
+        .box11 {
+            background-color: rgb(170, 180, 224);
+        }
+
+        .box12 {
+            background-color: rgb(7, 9, 88);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box1">
+            <p>1</p>
+        </div>
+        <div class="box2">
+            <p>2</p>
+        </div>
+        <div class="box3">
+            <p>3</p>
+        </div>
+        <div class="box4">
+            <p>4</p>
+        </div>
+        <div class="box5">
+            <p>5</p>
+        </div>
+        <div class="box6">
+            <p>6</p>
+        </div>
+        <div class="box4">
+            <p>4two</p>
+        </div>
+        <div class="box7">
+            <p>7</p>
+        </div>
+        <div class="box8">
+            <p>8</p>
+        </div>
+        <div class="box9">
+            <p>9</p>
+        </div>
+        <div class="box10">
+            <p>10</p>
+        </div>
+        <div class="box11">
+            <p>11</p>
+        </div>
+        <div class="box12">
+            <p>12</p>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,975 @@
+:root {
+    --blue-color: rgb(83, 92, 160);
+    --green-color: rgb(89, 183, 137);
+    --pg-gray: rgb(249, 249, 249);
+    --font-gray: rgb(118, 113, 109);
+    --box-border: rgb(233, 234, 236);
+}
+
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+/*  ----------------------------- Nav CSS -------------------------- */
+.navbar {
+    position: fixed;
+    top: 10px;
+    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    margin-left: 10%;
+    margin-right: 10%;
+    width: 80%;
+    padding: 15px;
+    display: flex;
+    border-radius: 10px;
+    box-shadow: 10px 10px 20px rgb(173, 173, 173),
+        0px 0px 0px rgb(218, 218, 218);
+    /* background-color: white; */
+    background-color: var(--pg-gray);
+    z-index: 2;
+}
+
+.nav-left {
+    display: flex;
+}
+
+.nav-left ul {
+    color: black;
+    list-style-type: none;
+}
+
+.nav-left ul li {
+
+    display: inline;
+    padding: 20px;
+}
+
+.a-nav ul li {
+    display: inline;
+    padding: 10px;
+}
+
+
+.a-nav ul li a {
+    text-decoration: none;
+    color: var(--font-gray);
+}
+
+.nav-right a {
+    text-decoration: none;
+    color: black;
+}
+
+.nav-right {
+    padding-left: 220px;
+    padding-right: 15px;
+}
+
+.nav-right i {
+    border: 2px solid var(--green-color);
+    background-color: var(--green-color);
+    border-radius: 50px;
+    font-size: 20px;
+    padding: 10px;
+    color: white;
+}
+
+.nav-right a {
+    background-color: white;
+    padding: 15px;
+    border: 2px solid var(--green-color);
+    border-radius: 30px;
+    color: var(--green-color);
+}
+
+/* HOVER STYLING OF NAVBAR */
+.a-nav ul li a:hover {
+    text-decoration: underline;
+    color: var(--green-color);
+}
+
+.nav-right a:hover {
+    background-color: var(--green-color);
+    color: white;
+}
+
+/* ---------------------------- HOME CSS ---------------------------------- */
+.home-content {
+    width: 100%;
+    height: 650px;
+    background-color: var(--green-color);
+    /* background-image: linear-gradient(to bottom right, #535da1 0%, #59b789 100%); */
+}
+
+.hero-div {
+    display: flex;
+    height: 500px;
+    width: 100%;
+}
+
+.hero-div-left {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-left: 120px;
+    /* padding-top: 200px; */
+}
+
+.top-div {
+    display: flex;
+    gap: 15px;
+    float: left;
+    align-items: center;
+}
+
+.top-div img {
+    width: 90px;
+    height: 90px;
+    border: 1px solid none;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.top-div p {
+    background-color: white;
+    font-size: 40px;
+    border: 1px solid none;
+    border-radius: 40px;
+    padding: 10px;
+}
+
+.bottom-div {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.bottom-div p {
+    background-color: white;
+    color: var(--green-color);
+    font-size: 35px;
+    border: 1px solid none;
+    border-radius: 40px;
+    padding: 10px;
+}
+
+.bottom-div button {
+    width: 150px;
+    padding: 15px;
+    border: 1px solid var(--blue-color);
+    border-radius: 30px;
+    font-size: 20px;
+    background-color: var(--blue-color);
+}
+
+.bottom-div button a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.bottom-div button:hover {
+    background-color: var(--green-color);
+    border: 1px solid var(--green-color);
+    box-shadow: 10px 10px 20px #4c9c74,
+        -5px -5px 20px #4c9c74;
+}
+
+.hero-div-right {
+    padding-left: 200px;
+}
+
+.relative {
+    width: 350px;
+    height: 350px;
+    background-color: white;
+    border: 1px solid none;
+    border-radius: 50%;
+    position: relative;
+    bottom: 100px;
+}
+
+.absolute img {
+    width: 550px;
+    height: 370px;
+    position: absolute;
+    bottom: 35px;
+    right: 30px;
+}
+
+/* ---------------------------------- ABOUT CSS --------------------------------*/
+/* .about {
+    padding: 100px;
+} */
+
+.about-content {
+    padding: 100px;
+    display: flex;
+}
+
+.div-left img {
+    width: 550px;
+    height: 380px;
+    border: 1px solid none;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.div-right {
+    padding-left: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    width: 450px;
+    color: white;
+}
+
+.hero-content {
+    display: flex;
+    background-color: var(--green-color);
+    width: 450px;
+    height: 150px;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid none;
+    border-radius: 10px;
+    justify-content: right;
+}
+
+.hero-content p {
+    color: white;
+    font-size: 50px;
+    padding-right: 20px;
+}
+
+.hero-content img {
+    padding-right: 10px;
+    width: 150px;
+    height: 150px;
+    border: 1px solid none;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.bottom-content {
+
+    font-weight: 100;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.bottom-content h1 {
+    color: black;
+    font-size: 40px;
+}
+
+.bottom-content p {
+    font-size: 20px;
+    color: var(--font-gray);
+}
+
+/* -------------------------------- ABOUT-2 CSS ------------------------*/
+.about-content2 {
+    background-color: var(--pg-gray);
+    padding: 100px;
+    display: flex;
+    gap: 100px;
+}
+
+.table-content table {
+    border: 1px solid rgb(228, 227, 227);
+    border-radius: 15px;
+    /* border-collapse: separate; */
+    border-spacing: 0;
+    overflow: hidden;
+}
+
+.table-content tr:nth-child(even) {
+    background: white;
+}
+
+.table-content table th,
+td,
+tr {
+    font-size: 20px;
+    border: 1px solid rgb(228, 227, 227);
+    text-align: left;
+    padding-left: 15px;
+}
+
+.table-content table thead th {
+    font-size: 30px;
+    padding: 15px;
+}
+
+.table-content table tbody tr td {
+    width: 400px;
+    padding: 15px;
+    color: var(--font-gray);
+}
+
+.table-content table tbody tr td a {
+    text-decoration: none;
+    color: var(--font-gray);
+}
+
+.table-content tbody tr th {
+    color: var(--green-color);
+    width: 150px;
+}
+
+.services-right-content {
+    display: flex;
+    gap: 30px;
+}
+
+.sub-right-content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.sub-right-content hr {
+    width: 250px;
+}
+
+.data h1 {
+    color: rgb(31, 36, 42);
+    font-size: 70px;
+}
+
+.data p {
+    color: var(--green-color);
+    font-size: 20px;
+}
+
+/*------------------------------- ABOUT-3 CSS ----------------------------*/
+.about-content3 {
+    height: 200px;
+    padding: 100px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.about3-head h1 {
+    font-size: 40px;
+}
+
+.companies {
+    display: flex;
+    gap: 80px;
+    justify-content: center;
+}
+
+.companies img {
+    width: 100px;
+    height: 100px;
+}
+
+.companies img:hover {
+    width: 130px;
+    height: 130px;
+    justify-content: stretch;
+}
+
+/* .icons {
+    display: flex;
+    gap: 100px;
+    align-items: center;
+    justify-content: center;
+}
+
+.cachet p {
+    font-weight: 100;
+    font-size: 30px;
+    color: var(--font-gray);
+}
+
+.cachet p i {
+    font-size: 30px;
+    color: rgb(149, 191, 76);
+}
+
+.cachet p:hover {
+    font-size: 40px;
+}
+
+.guitar-center {
+    font-size: 25px;
+}
+
+.guitar-center:hover {
+    font-size: 30px;
+}
+
+.tokico p {
+    font-size: 25px;
+    color: rgb(162, 75, 73);
+}
+
+.tokico p:hover {
+    font-size: 30px;
+}
+
+.shopify i {
+    font-size: 110px;
+    color: rgb(149, 191, 76);
+}
+
+.shopify i:hover {
+    font-size: 130px;
+}
+
+.profil-rejser {
+    font-size: 25px;
+}
+
+.profil-rejser:hover {
+    font-size: 30px;
+} */
+
+/* ------------------------------ SERVICES ----------------------------- */
+.services-content {
+    padding: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+    justify-items: center;
+    background-color: var(--pg-gray);
+}
+
+.service-head {
+    display: flex;
+    background-color: var(--green-color);
+    width: 80%;
+    height: 150px;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid none;
+    border-radius: 10px;
+    justify-content: center;
+}
+
+.service-head img {
+    width: 150px;
+    height: 150px;
+    border: 1px solid none;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.service-head h1 {
+    color: white;
+    font-size: 50px;
+    padding-left: 20px;
+}
+
+/* servcies cards css-------------------- */
+.CARDS {
+    display: flex;
+    gap: 20px;
+}
+
+.card {
+    width: 360px;
+    height: 400px;
+    padding: 50px;
+    border-radius: 15px;
+    background: #ffffff;
+    /* box-shadow: 5px 5px 9px #e2e1e1,
+        -5px -5px 9px #ffffff; */
+    position: relative;
+    overflow: hidden;
+}
+
+
+
+.two-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.card-top {
+    display: flex;
+    padding-bottom: 15px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card-top button {
+    font-weight: bold;
+    padding: 5px;
+    background-color: var(--blue-color);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    width: 20%;
+
+}
+
+.card-bottom {
+
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.card-bottom p {
+    font-size: 20px;
+    color: var(--font-gray);
+}
+
+.card-bottom button {
+    padding: 15px;
+    background-color: white;
+    border: 1px solid rgb(228, 227, 227);
+    border-radius: 50px;
+    width: 180px;
+}
+
+.card-bottom a {
+    padding: 15px;
+    background-color: white;
+    border: 1px solid rgb(228, 227, 227);
+    border-radius: 50px;
+    width: 160px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--font-gray);
+    text-align: center;
+}
+
+.small-card {
+    background-color: white;
+    border: 1px solid rgba(226, 225, 225, 0.623);
+    border-radius: 10px;
+    transform: rotate(-35deg);
+    position: absolute;
+    top: 270px;
+    right: -5px;
+    /* top: 300px; */
+    /* right: 0px; */
+    width: 220px;
+    height: 270px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.small-card i {
+    font-size: 80px;
+    color: black;
+    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+/* CARDS HOVER_____________________ */
+.card:hover {
+    border: 2px solid var(--green-color);
+    box-shadow: 7px 7px 14px #e2e1e1,
+        -7px -7px 14px #e2e1e1;
+}
+
+.card:hover .card-top button {
+    background-color: var(--green-color);
+    color: white;
+}
+
+.card:hover .small-card {
+    background-color: var(--green-color);
+    border: 1px solid var(--green-color);
+}
+
+.card:hover .small-card i {
+    color: white;
+}
+
+.card-bottom button:hover {
+    background-color: var(--green-color);
+
+}
+
+.card-bottom a:hover {
+    color: white;
+    background-color: var(--green-color);
+}
+
+/* ----------------------------- PROJECTS CSS ----------------------------- */
+.project-content {
+    padding: 130px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.project-head-container {
+    justify-content: flex-end;
+}
+
+.project-head {
+    display: flex;
+    background-color: var(--green-color);
+    width: 60%;
+    height: 150px;
+    margin-left: 410px;
+    padding: 10px;
+    border: 1px solid none;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.project-head img {
+    width: 150px;
+    height: 150px;
+    border: 1px solid none;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.project-head h1 {
+    color: white;
+    font-size: 50px;
+    padding-left: 20px;
+}
+
+/* project cards css--------------- */
+.project-card {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.p-card {
+    border: 1px solid none;
+    border-radius: 20px;
+    padding: 40px;
+    width: 260px;
+    height: 355px;
+    background-color: var(--pg-gray);
+    position: relative;
+    overflow: hidden;
+}
+
+.p-card p {
+    color: var(--green-color);
+}
+
+.p-card h1 {
+    padding-bottom: 20px;
+}
+
+.p-card img {
+    transform: rotateZ(15deg);
+    transition: transform 0.5s, top 0.5s, left 0.5s;
+    margin: auto 0%;
+    width: 270px;
+    height: 280px;
+    border: 1px solid none;
+    border-radius: 20px;
+    position: absolute;
+    top: 190px;
+    left: 30px;
+}
+
+/* project cards hover css--------------- */
+.p-card:hover {
+    border: 2px solid var(--green-color);
+}
+
+.p-card:hover img {
+    transition-duration: 0.5;
+    transition-timing-function: ease;
+    transition-delay: 0s;
+    transition-property: all;
+    transform: rotateZ(0deg);
+    top: 115px;
+    left: 35px;
+}
+
+/*------------------------- CONTACT CSS ------------------------ */
+.contact-content {
+    background-color: var(--pg-gray);
+    padding: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.contact-head {
+    display: flex;
+    background-color: var(--green-color);
+    width: 40%;
+    height: 150px;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid none;
+    border-radius: 10px;
+    justify-content: center;
+}
+
+.contact-head img {
+    width: 150px;
+    height: 150px;
+    border: 1px solid none;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.contact-head h1 {
+    color: white;
+    font-size: 50px;
+    padding-left: 20px;
+}
+
+/* CONTACT DIVS CSS------------------ */
+.main-contact-div {
+    display: flex;
+    gap: 40px;
+}
+
+.sub-contact-div {
+    display: flex;
+    gap: 2px;
+    border: 1px solid none;
+    border-radius: 10px;
+    width: 50%;
+    height: 400px;
+}
+
+/* SUP_SUB_DIV_LEFT CSS--------------------- */
+.sup-sub-contact-div-left {
+    background-color: white;
+    padding: 30px;
+    padding-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 50%;
+    border: 1px solid none;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+.first {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.first p {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.first h3 {
+    color: var(--font-gray);
+    font-weight: 100;
+}
+
+.sub-service-btn {
+    display: flex;
+    gap: 10px;
+}
+
+.service-btn {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.sub-service-btn button {
+    padding: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-weight: 700;
+    color: var(--font-gray);
+    background-color: white;
+    border: 1px solid rgb(228, 227, 227);
+    border-radius: 50px;
+}
+
+.sub-service-btn button:hover {
+    border: 1px solid var(--green-color);
+    background-color: var(--green-color);
+    color: white;
+}
+
+/* APPS ICONS CSS--------------- */
+.apps-icon {
+    display: flex;
+    gap: 5px;
+}
+
+.apps-icon i {
+    border: 1px solid gray;
+    border-radius: 50%;
+    padding: 10px;
+    font-size: 14px;
+}
+
+.apps-icon i:hover {
+    border: 1px solid var(--green-color);
+    background-color: var(--green-color);
+    color: white;
+}
+
+/* SUP_SUB_DIV_RIGHT CSS--------------------- */
+.sup-sub-contact-div-right {
+    background-color: white;
+    padding: 30px;
+    padding-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 50%;
+    border: 1px solid none;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.second {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.second p {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.second h3 {
+    color: var(--font-gray);
+    font-weight: 100;
+}
+
+.second a {
+    text-decoration: none;
+    color: var(--font-gray);
+}
+
+.second a:hover {
+    color: var(--green-color);
+}
+
+/* contact right side css-------------------- */
+.contact-info-div {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.name-email {
+    display: flex;
+    gap: 20px;
+}
+
+.name-email input {
+    border: 2px solid var(--box-border);
+    width: 250px;
+    height: 50px;
+    font-size: 15px;
+    padding-left: 10px;
+    outline: none;
+}
+
+.name-email input:hover {
+    border: 2px solid var(--green-color);
+    background-color: var(--pg-gray);
+}
+
+.name-email input:focus {
+    border: 2px solid var(--green-color);
+}
+
+/* SELECTION BOXES----------------------------- */
+.selecting-div {
+    display: flex;
+    gap: 15px;
+}
+
+.sub-select {
+    width: 123px;
+    height: 85px;
+    margin: 0% auto;
+    border: 2px solid var(--box-border);
+    background-color: white;
+    border-radius: 5px;
+    outline: none;
+}
+
+.sub-select:hover {
+    border: 2px solid var(--green-color);
+    background-color: var(--pg-gray);
+}
+
+.sub-select i {
+    color: var(--green-color);
+    padding: 25px;
+    padding-bottom: 5px;
+}
+
+.sub-select p {
+    color: var(--font-gray);
+    padding: 15px;
+    padding-top: 5px;
+}
+
+/* description css--------------------------------- */
+.detail-div textarea {
+    border: 2px solid var(--box-border);
+    width: 530px;
+    height: 100px;
+    font-size: 15px;
+    padding-left: 10px;
+    padding-top: 10px;
+    outline: none;
+}
+
+.detail-div textarea:hover {
+    border: 2px solid var(--green-color);
+    background-color: var(--pg-gray);
+}
+
+.detail-div textarea:focus {
+    border: 2px solid var(--green-color);
+}
+
+.send button {
+    width: 110px;
+    padding: 15px;
+    border: 1px solid var(--green-color);
+    border-radius: 30px;
+    font-size: 15px;
+    font-weight: bold;
+    background-color: var(--green-color);
+    color: white;
+    float: right;
+}
+
+.send button:hover {
+    border: 1px solid var(--blue-color);
+    background-color: var(--blue-color);
+}
+
+/* last css----------------------- */
+.last-content {
+    padding: 55px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    gap: 10px;
+    color: var(--font-gray);
+}
