@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>class no 23</title>
+</head>
+
+<body>
+    <p id="demo">
+    <h2>Hello world</h2>
+    </p>
+    <p id="new"></p>
+    <!-- <p class="demo"></p>
+    <p class="demo"></p> -->
+    <script>
+        // window object j or is mai sab kuch para huwa h (alert bhi)
+        // script k andar ho to window ki zrurt ni scrip window hi h 
+        window.alert("hello")
+        alert("Hello world")
+        //  getElementById to pick id --- getElementByClassNAme to pick class ---- getElementbyTag to pick tag
+        // document.getElementsByClassName('demo').innerHTML = '<h2>HELLO</h2>'
+        document.getElementById('demo').innerHTML = '<h2>HELLO</h2>'
+        firstname = "fatima"
+        rollNo = 354
+        data = document.getElementById('demo').innerHTML = firstname
+        console.log(data)
+        data = document.getElementById('demo').innerHTML = rollNo
+        console.log(data)
+        // variables
+        //  decleare, intialiize
+        //  const, var , let
+        //  const dont change value it is used for fixed value like PI cmst keyword ko jab use kerna ik sth declear or intialize kerwana hota h
+        const pi = 3.14  //type error if not intiallized
+
+        // var globally use ho skta h ik sth intiallize kerana zruri  ni -- iski value chng hoskti h
+        var text;
+        text = "Global Variable"
+        console.log(text);
+        text = "new new new"
+        console.log(text);
+        var text = "data type is string"
+        console.log(text);
+
+
+        var rollno = 100;
+        console.log(rollno);
+        //    let specifically use hota h 
+        //  same name ka variable (var or let ) k sth ni bna skty
+        let Rollno;
+        Rollno = 4;
+        console.log(Rollno); //undefined 
+        data = document.getElementById('new').innerHTML = Rollno
+        data = document.getElementById('new').innerText = "<h2> hello world </h2>"
+        // data = document.getElementById('demo') = Rollno  ==== uncaught refrence error 
+
+        Rollno = 324;
+        console.log(Rollno);
+        // to check datatype of a variable
+        console.log(typeof (Rollno))
+    </script>
+</body>
+
+</html>

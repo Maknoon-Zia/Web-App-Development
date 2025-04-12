@@ -1,0 +1,89 @@
+:root {
+    --zink: rgb(31, 71, 75);
+}
+
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+nav {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 100px;
+    background-color: rgb(254, 251, 245);
+    width: 100%;
+    height: 60px;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0%;
+}
+
+.home ul {
+    list-style-type: none;
+}
+
+.home ul li {
+    display: inline;
+    color: var(--zink);
+    font-weight: bold;
+    font-size: 25px;
+    padding-inline: 20px;
+}
+
+.nav-anchar ul {
+    list-style-type: none;
+}
+
+.nav-anchar ul li {
+    display: inline;
+}
+
+.nav-anchar ul li a {
+    text-decoration: none;
+    color: var(--zink);
+    padding-inline: 20px;
+}
+.nav-icons i{
+    padding-inline: 20px;
+    color: var(--zink);
+}
+body {
+    background-image: url(./images/os_full_width_hero_desktop.png);
+    background-repeat: no-repeat;
+    /* background-attachment: fixed; */
+    background-size: cover;
+    background-position: center;
+    max-width: 100%;
+    min-width: auto;
+    height: 650px; 
+}
+.small-div{
+    margin-top: 250px;
+    margin-left: 100px;
+    background-color: rgb(254, 249, 242);
+    width: 500px;
+    height: 204px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 15px;
+}
+.small-div h1{
+    color: var(--zink);
+    font-size: 40px;
+    font-weight:bold ;
+}
+.small-div p{
+    color: var(--zink);
+    font-size: 18px;
+}
+.small-div button{
+    color: white;
+    background-color: var(--zink);
+    padding: 15px;
+    border:1px solid var(--zink) ;
+    border-radius: 5px;
+    font-size: 18px;
+}

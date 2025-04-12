@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>operators</title>
+</head>
+<body>
+    <p id="x_Text"></p>
+    <p id="x_value"></p>
+    <p id="y_Text"></p>
+    <p id="y_value"></p>
+    <p id="addition_text"></p>
+    <p id="addition_operation"></p>
+    <p id="subtraction_text"></p>
+    <p id="subtraction_operation"></p>
+    <p id="multiplication_text"></p>
+    <p id="multiplication_operation"></p>
+    <p id="division_text"></p>
+    <p id="division_operation"></p>
+    <p id="modulus_text"></p>
+    <p id="modulus_operation"></p>
+    <p id="increment_text"></p>
+    <p id="incremen_operation"></p>
+    <p id="decrement_text"></p>
+    <p id="decrement_operation"></p>
+    <p id="exponentiation_text"></p>
+    <p id="exponentiation_operation"></p>
+    
+    <script>
+        var x = 5; 
+        var y = 10;
+        console.log("Value of x: ", x)
+        document.getElementById("x_Text").innerHTML= "Value of x:"
+        document.getElementById("x_value").innerHTML= x
+        console.log("Value of y: ", y)
+        document.getElementById("y_Text").innerHTML= "Value of y:"
+        document.getElementById("y_value").innerHTML= y
+
+        console.log("x + y = ", x+y)
+        document.getElementById("addition_text").innerHTML= "x + y = "
+        document.getElementById("addition_operation").innerHTML= x+y
+
+        console.log("x - y = ", x-y)
+        document.getElementById("subtraction_text").innerHTML= "x - y = "
+        document.getElementById("subtraction_operation").innerHTML= x-y
+
+        console.log("x * y = ", x*y)
+        document.getElementById("multiplication_text").innerHTML= "x * y = "
+        document.getElementById("multiplication_operation").innerHTML= x*y
+
+        console.log("x / y = ", x/y)
+        document.getElementById("division_text").innerHTML= "x / y = "
+        document.getElementById("division_operation").innerHTML= x/y
+
+        console.log("x % y = ", x%y)
+        document.getElementById("modulus_text").innerHTML= "x % y = "
+        document.getElementById("modulus_operation").innerHTML= x%y
+
+        console.log("Increment in x: ", ++x)
+        document.getElementById("increment_text").innerHTML= "Increment in x: "
+        document.getElementById("incremen_operation").innerHTML= ++x
+
+        console.log("Decrement in x: ", --x)
+        document.getElementById("decrement_text").innerHTML= "Decrement in x: "
+        document.getElementById("decrement_operation").innerHTML= --x
+
+        console.log("Exponentiation in x: ", x**2)
+        document.getElementById("exponentiation_text").innerHTML= "Exponentiation in x: "
+        document.getElementById("exponentiation_operation").innerHTML= x**2
+        
+    </script>
+</body>
+</html>

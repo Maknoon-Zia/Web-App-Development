@@ -2,10 +2,12 @@
 :root {
     --font-color: #9C9C9C;
 }
-body{
+
+body {
     background-color: #080808;
 }
-.hero-section { 
+
+.hero-section {
     width: 100%;
     height: 700px;
     margin: 0% auto;
