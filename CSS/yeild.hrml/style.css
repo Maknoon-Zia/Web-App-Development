@@ -17,6 +17,7 @@ nav {
     justify-content: center;
     align-items: center;
     position: fixed;
+    z-index: 1;
     top: 0%;
 }
 
@@ -49,26 +50,22 @@ nav {
     padding-inline: 20px;
     color: var(--zink);
 }
-body {
+.main_1 {
     background-image: url(./images/os_full_width_hero_desktop.png);
     background-repeat: no-repeat;
-    /* background-attachment: fixed; */
     background-size: cover;
-    background-position: center;
-    max-width: 100%;
-    min-width: auto;
-    height: 650px; 
+    height: 68vh; 
+    padding-top: 17rem;
 }
 .small-div{
-    margin-top: 250px;
-    margin-left: 100px;
+    margin-left: 10rem;
     background-color: rgb(254, 249, 242);
-    width: 500px;
-    height: 204px;
+    width: 35%;
     display: flex;
     flex-direction: column;
     gap: 30px;
-    padding: 15px;
+    padding: 20px;
+  
 }
 .small-div h1{
     color: var(--zink);
@@ -86,4 +83,15 @@ body {
     border:1px solid var(--zink) ;
     border-radius: 5px;
     font-size: 18px;
+}
+.main_2{
+    width: 100%;
+    height: 650px;
+    background-color:rgb(224, 224, 224);
+    display: flex;
+    padding: 50px;
+}
+.main_2_img img{
+    width: 520px;
+    height: 520px;
 }
