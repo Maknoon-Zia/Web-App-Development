@@ -1,0 +1,69 @@
+ES6 ECMAScript 2015(ES6)
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>class no 32</title>
+</head>
+<style>
+    .myStyle{
+        background-color: cadetblue;
+        border: 1px solid ;
+        padding: 10px;
+    }
+</style>
+<body>
+    <div class="container"></div>
+    <button onclick="stylling()">Click me</button>
+    <div id="demo"></div>
+    <script>
+        const product = [
+            {
+                id : 1,
+                name : "Product no 1"
+            },
+            {
+                id : 2,
+                name : "Product no 2"
+            },
+            {
+                id : 3,
+                name : "Product no 3"
+            }
+        ]
+        let cardContainer = document.getElementsByClassName("container")[0];
+        product.map((product)=>{
+            const card = document.createElement("div");
+            card.innerHTML=`
+            <h1>${product.id}</h1>
+            <p>${product.name}</p>`
+// styling 
+            card.style.backgroundColor = `yellow`
+            card.style.padding = `10px`
+            card.style.marginTop = `10px`
+            cardContainer.appendChild(card);
+        })
+
+
+        function stylling(){
+            var element = document.getElementById("demo")
+            element.classList.add("myStyle")
+        }
+// forEach neww array ni bnata map() new array bnat h 
+        const array = [1,2,3,4,5 ]
+        const newarray = array.forEach((value)=> {
+            return value+1
+        })
+        console.log(newarray);//undefined use map to seee new array
+        console.log(array);
+
+
+        const float_no = 40.55
+        const Data = Math.round(float_no)
+        console.log(Data);
+        // .floor(),  .ceil(),  .trunc(),  .sign(),  .pow(),  .sqrt(), .abs(),  .sin()
+        // .cos(),   min(),  .max(),  .random(),  .log() 
+    </script>
+</body>
+</html>

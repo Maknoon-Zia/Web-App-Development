@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class No 29</title>
+</head>
+<body>
+    <!-- string methods -->
+     <!-- length, ToUpper, ToLower, concat, CharAt, split, slice, replace, replacAll -->
+<form action="">
+    <h1>Register Form</h1>
+    <input type="text" placeholder="name">
+    <input type="email" placeholder="email">
+    <input type="file">
+    <input type="color">
+</form>
+
+     <script>
+ 
+        // map, for, foreach, filter, 
+        // ARRAY METHODS____________________
+        // push Pop 
+        // const arr = ["name"," email" , "password"]
+        // console.log(arr.pop());
+        // console.log(arr);
+
+        
+        // console.log(arr);
+        // const storePopValue=arr.pop();
+        // arr.pop();
+        // arr.pop();
+        // console.log(arr);
+        // console.log(storePopValue);
+
+        // adding new values -----------------through error
+        // arr = ["add", "data"]
+        // console.log(arr);---------------through error cuz array declare as const 
+
+
+
+        // "typeof" ---> use to check type of data (data type)
+        // console.log(typeof(storePopValue));---------------String
+        // console.log(typeof(arr));-------------------------object
+
+
+        // push() method to add value at last element 
+        // arr.push(23);
+        // console.log("push method", arr);
+
+        // shift to pop value from start
+        // arr.shift();
+        // console.log("shift method" , arr);
+
+        // unShift method to add value at first index
+        // arr.unshift(45);
+        // console.log("unshift methd", arr);
+
+        // why these methods use , use in form 
+        // ['name', 'email']
+        // push= image
+
+
+        // changing arr dat type
+        // let arr = ["name"," email" , "password"];
+        // arr[0]= "username";
+        // console.log(arr);
+
+        // let arr1 =[1, 2, 3, 4, 5]
+        // console.log(arr.concat(arr1));
+
+        // let arr2 = [true, false]
+        // console.log(arr + arr1 + arr2);//convert in string
+        // console.log(arr, arr1.concat(arr2));
+        // console.log(arr.concat(arr1, arr2));
+
+
+        // flat()---------- remove inner arrays brackets
+        // let myarr = [[1,2], [3,4], [5,6]];// 2D arrays
+        // console.log(myarr[0][0]);
+        // console.log(myarr[1][1]);
+
+        // let newarr= myarr.flat()
+        // console.log(newarr);
+
+
+        // let myarr = [[1,['A', 'B', 'C']], [3,4], [5,6]];
+        // let newarr= myarr.flat()
+        // console.log(newarr);
+
+        // console.log(newArr[1]);
+
+
+
+        // SPLICE() = split+slice 
+        // (starting index , 0= (delete mi kerna , index.num delete krdo, no. of elemens to be deleted), add krny wali vlaue)
+        let arr = ["name"," email" , "password"];
+        // arr.splice(2, 0 , "apple")
+        // arr.splice(3, 0 , "apple")
+        // arr.splice(3, 1 , "apple" )
+        // arr.splice(1)//-----------------[name]
+        arr.splice(0, 1)//-----------------[email, password]
+        console.log(arr)
+        </script>
+</body>
+</html>

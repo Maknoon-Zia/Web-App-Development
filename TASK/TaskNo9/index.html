@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Product Cards</title>
+    <style>
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .card {
+            background-color: ghostwhite;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 16px;
+            width: 250px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        
+
+        .card h3 {
+            margin-top: 0;
+        }
+
+        .out-of-stock {
+            color: red;
+        }
+
+        .in-stock {
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="card-container"></div>
+
+    <script>
+        // Sample JSON array
+        const products = [
+            {
+                "id": 1,
+                "name": "Product no 01",
+                "description": "High-quality product with modern features.",
+                "price": 29.99,
+                "currency": "USD",
+                "inStock": true,
+                "category": "Electronics",
+                "tags": ["gadget", "tech", "new"],
+                "createdAt": "2025-05-16T10:00:00Z",
+                "updatedAt": "2025-05-16T10:00:00Z"
+            },
+            {
+                "id": 2,
+                "name": "Product no 02",
+                "description": "Durable and affordable item for everyday use.",
+                "price": 15.50,
+                "currency": "USD",
+                "inStock": false,
+                "category": "Home & Kitchen",
+                "tags": ["kitchen", "daily-use"],
+                "createdAt": "2025-05-15T12:30:00Z",
+                "updatedAt": "2025-05-15T12:30:00Z"
+            }
+        ];
+
+        // Select the container using getElementsByClassName
+        const container = document.getElementsByClassName("card-container")[0];
+
+        // Iterate and create cards
+        products.forEach(product => {
+            const card = document.createElement("div");
+            card.className = "card";
+
+            card.innerHTML = `
+      <h3>${product.name}</h3>
+      <p><strong>Description:</strong> ${product.description}</p>
+      <p><strong>Price:</strong> ${product.currency} ${product.price}</p>
+      <p><strong>Category:</strong> ${product.category}</p>
+      <p><strong>Status:</strong> <span class="${product.inStock ? 'in-stock' : 'out-of-stock'}">
+        ${product.inStock ? 'In Stock' : 'Out of Stock'}
+      </span></p>
+      <p><strong>Tags:</strong> ${product.tags.join(', ')}</p>
+    `;
+
+            container.appendChild(card);
+        });
+    </script>
+
+</body>
+
+</html>
