@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulated Fish Weight Check</title>
+</head>
+
+<body>
+    <script>
+        function checkFishWeight(weight, minWeight, Callback) {
+            if (weight == minWeight) {
+                setTimeout(() => {
+                    Callback("Pass")
+                }, 2000)
+            }
+            else {
+                setTimeout(() => {
+                    Callback("Fail")
+                }, 2000)
+            }
+        }
+        function scoringCallback(result) {
+            console.log("Result of Check: " + result)
+        }
+
+        // calling function
+        checkFishWeight(4.0, 4.0, scoringCallback)
+    </script>
+</body>
+
+</html>

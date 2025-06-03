@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Instagram Post</title>
+</head>
+<style>
+    .post {
+        border: 1px solid black;
+        width: 400px;
+        height: 600px;
+        margin: 0% auto;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        padding: 1rem;
+        background-color: ivory;
+    }
+
+    .image img {
+        width: 100%;
+        height: auto;
+    }
+    .buttons{
+        display: flex;
+        justify-content: space-between;
+    }
+    .btn i{
+        font-size: 1.5rem;
+    }
+    .btn1 i{
+        gap: 10px;
+        font-size: 1.5rem;
+    }
+    #heart:focus{
+        color: red;
+    }
+</style>
+
+<body>
+    <div class="post">
+        <div class="image">
+            <img src="./images/profile.jpg" alt="">
+        </div>
+        <div class="buttons">
+            <div class="btn1">
+                <i class="fa-regular fa-heart" onclick="heartClick()" id="heart"></i>
+                <i class="fa-regular fa-comment" id="comment"></i>
+                <i class="fa-regular fa-paper-plane"></i>
+            </div>
+            <div class="btn">
+                <i class="fa-solid fa-ellipsis"></i>
+            </div>
+            <div class="btn">
+                <i class="fa-regular fa-bookmark"></i>
+            </div>
+
+    </div>
+<script>
+function heartClick() {
+  const heart = document.getElementsByClassName("fa-heart")[0]
+  heart.classList.add('fa-solid')
+}
+</script>
+
+
+</body>
+
+</html>

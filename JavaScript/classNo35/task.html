@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class 35 Task</title>
+</head>
+<style>
+    form{
+        display: flex;
+        flex-direction: column;
+        gap: 0.5remn;
+        width: 100%;
+        align-items: center;
+    }
+    #name{
+        padding: 0.5rem;
+    }
+    #email{
+        padding: 0.5rem;
+    }
+    #password{
+        padding: 0.5rem;
+    }
+    #submit{
+        padding: 0.5rem;
+        padding-inline: 1rem;
+        background-color: green;
+        border: 1px solid green;
+        border-radius: 0.5rem;
+    }
+</style>
+<body>
+   <form >
+        <input id="name" type="text" placeholder="Name">
+        <input type="email" placeholder="email" id="email">
+        <input type="password" placeholder="password" id="password">
+        <input type="submit" id="submit">
+    </form>
+    <script>
+        const Name = document.getElementById("name")
+        const Email = document.getElementById("email")
+        if (Name.value= " " && Email.value= " ")
+        {
+            alert("Input field is empty!");
+        }
+    </script>
+</body>
+</html>

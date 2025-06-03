@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>class 35</title>
+</head>
+
+<body>
+    <!-- <form action="../classNo23/index.html" method=""></form> -->
+    <!-- method : get , post(dat create e.g., form) , patch/ put , delete -->
+    <!-- backend h ye sara  -->
+    <!-- crud:(create(post), read(get) , update(patch), delete(delete)) (full frm of these 4 methds) -->
+    <!-- <input type="text" value="" id="name">  user jo bhi data likhta h vo value m jati h  -->
+    <form action="">
+
+        <input type="text" id="name">
+        <BUtton onclick="check">submit</BUtton>
+        <div id="error"></div>
+    </form>
+    <script>
+        function check() {
+            const data = document.getElementById("name").value
+            const error = document.getElementById("error")
+            if (data === "") {
+                error.innerHTML = `<p>Fill this input</p>`
+                error.style.color = "red"
+                // alert("you must have to fill this field")
+            } else {
+                error.innerHTML = '<p>succesfully fill</p>'
+            }
+
+        }
+
+    </script>
+</body>
+
+</html>

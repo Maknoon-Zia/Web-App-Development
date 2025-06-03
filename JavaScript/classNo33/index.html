@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class No 33</title>
+</head>
+
+<body>
+    <div id="title"></div>
+    <div id="price"></div>
+    <div id="image"></div>
+    <script>
+        // fillter(),  forEach(),  map()
+        const productdata = [
+            {
+                "id": 1,
+                "title": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
+                "price": 109.95,
+                "description": "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
+                "category": "men's clothing",
+                "image": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg"
+            }
+        ]
+        const product = productdata[0]
+        const title = document.getElementById('title')
+        title.innerHTML = `<h1>${product.title}</h1>`
+        const price = document.getElementById('price')
+        price.innerHTML = `<h1>${product.price}</h1>`
+        const image = document.getElementById('image')
+        image.innerHTML = `<img src="${product.image}" alt="image" width="50"/>`
+        // data -----> create, delete,  update,  display 
+
+
+        let i = 0;
+        let text =""
+        // while (i < 10) {
+        //     text += "<br>The number is " + i+ "\n";
+        //     i++;
+        // }
+        // console.log(text);
+
+        do{
+            text += "<br>The number is " + i+ "\n";
+            i++;
+        } 
+        while (i < 10)
+        console.log(text);
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+<!--   Items To explore:
+APPs .... ReactNative
+Web  .... React  ,  NextJS(backend b kr skty is mai)  , Firebase(backend se phly firebase react  k bad ye beginner ko familiure kerta h backend sath)
+            NodeJS(for backend) -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class No 36</title>
+</head>
+
+<body>
+    <script>
+        // JAVASCRIPT Declaration are HOISTED----------------------------------------
+        // const data;-----throw error -----------const ko hamesha sth hi intiallize kerna perta h
+        // const data = 13;
+        // var Data ; //var can be declared first
+        // function Move(){
+        //     console.log(data);
+        // }
+
+        // Calling a function 
+        // Move()
+
+
+        // function Move(){
+        //     const data = 13;
+        //     console.log(data);
+        // }
+        // console.log(data);// cannot print above data variable of const
+
+        // var data = 20;
+        // function Move(){
+        //     data = 30;
+        //     console.log(data);
+        // }
+        // Move()
+        // console.log(data);
+
+
+        // hosited var (by default var hi hota h )
+        // data = 30;
+        // var data;//valid 
+        // let data;    //Thorrow error Uncaught ReferenceError: Cannot access 'data' before initialization
+        // const data;  //not possible
+        // console.log(data);
+
+
+
+        // Asynchoronous (Callbacks)
+
+        function Move(callback){
+            console.log("This is move function");
+        }
+        function callback (){
+            console.log("Hello");
+        }
+        Move(callback())
+    </script>
+</body>
+
+</html>
