@@ -522,6 +522,27 @@ body {
         width: 100%;
         max-width: 400px;
     }
+
+    .hero-section,
+    .project-section,
+    .extension-section,
+    .customise-section,
+    .plan-section,
+    .work-section,
+    .data-section,
+    .sponsor-section,
+    .favorite-section,
+    .client-section,
+    .whitpace-section,
+    .footer-section {
+        padding-block: 2rem !important;
+    }
+
+    .footer-bottom-social {
+        justify-content: center !important;
+        width: 100%;
+        margin-left: 0 !important;
+    }
 }
 
 @media (max-width: 767px) {
