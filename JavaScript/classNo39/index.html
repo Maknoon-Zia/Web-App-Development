@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>class no 39</title>
+</head>
+
+<body>
+    <div id="card"></div>
+    <div class="CARD"></div>
+    <script>
+        // Promises in JS
+        //  2 parameters (resolve , reject)
+
+
+        const promise = new Promise((resolve, reject) => {
+            success = true               //condition true = console Resolved
+            // success = false           //condition false = console Rejected
+
+            if (success) {
+                resolve("Resolved")
+            } else {
+                reject("Rejected")
+            //  reject("Server Error")
+            }
+        })
+        console.log(promise);            //console promise
+
+        // 404 => server eroor 
+        
+        //3 conditions:-
+        //   i- panding
+        //  ii- fullfilled(resolved)
+        // iii- rejected
+        
+        promise.then((result) => {       // resolve pr .then chalega
+            console.log(result);
+        }).catch((error) => {            // reject pr .catch chalega
+            console.log(error);
+        })                               
+        
+        // resolve or reject => parameters hain
+        // then    or catch  => keyword hain
+
+
+        const data = fetch('https://jsonplaceholder.typicode.com/posts')  //provide promise , join with data.then or .catch
+        console.log(data);
+
+        // header
+        // status:200(jab data mil jata h , backend or frontend dono ko is bary m pata hona chahiye)
+        // type : "cors" (cors origin)
+
+        data.then((result) => {       // resolve pr .then chalega
+            const response = result.json()
+            // console.log("Data is found" , result);
+            console.log(response);
+        }).catch((error) => {            // reject pr .catch chalega
+            console.log(error);
+        })
+
+
+        fetch('https://fakestoreapi.com/products').then((result) => {       
+            return result.json()
+            
+        }).then((result) => {       
+            console.log(result);             //display 20 products in console
+
+            result.map((value , index)=>{
+                const card = document.getElementById('card')
+                card.innerHTML = `<h1>${value.title}</h1>`
+            })
+            
+        }).catch((error) => {           
+            console.log(error);
+        })
+
+        </script>
+</body>
+
+</html>
