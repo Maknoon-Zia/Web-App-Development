@@ -20,17 +20,21 @@
     <div id="person"></div>
     <p style="color: cornflowerblue;">Destructuring of NESTED OBJECT</p>
     <div id="book"></div>
-    <p style="color: cornflowerblue;">Spread Operator to Copy and Update an Object</p>
+    <p style="color: cornflowerblue;"><b>Spread Operator</b> to Copy and Update an Object</p>
     <div id="student"></div>
-    <p style="color: cornflowerblue;">Spread Operator Example: Update Object Property (Section)</p>
+    <p style="color: cornflowerblue;"><b>Spread Operator</b> Example: Update Object Property (Section)</p>
     <div id="updatedStudent"></div>
-    <hr></hr>
+    <hr>
+    </hr>
     <p style="color: coral;">Destructuring of ARRAYS</p>
-<div id="fruits"></div>
-<p style="color: coral;">Destructuring of NESTED ARRAYS</p>
-<div id="colors"></div>
-<p style="color: coral;">Array Destructuring with Skipping(second score) and Default(third score) Values</p>
-<div id="scores"></div>
+    <div id="fruits"></div>
+    <p style="color: coral;">Destructuring of NESTED ARRAYS</p>
+    <div id="colors"></div>
+    <p style="color: coral;">Array Destructuring with Skipping(second score) and Default(third score) Values</p>
+    <div id="scores"></div>
+    <p style="color: coral;">Using <b>Spread Operator</b> to Combine Arrays</p>
+    <div id="allColors"></div>
+    <hr></hr>
 
     <script>
 
@@ -73,8 +77,8 @@
             section: 'B'
         };
         // HTML
-        document.getElementById('student').innerHTML = `<h3>Student Name: ${student.stuName}</h3>` + `<h4>Class: ${student.Class}</h4>` 
-        + `<h4>Section: ${student.section}</h4>`;
+        document.getElementById('student').innerHTML = `<h3>Student Name: ${student.stuName}</h3>` + `<h4>Class: ${student.Class}</h4>`
+            + `<h4>Section: ${student.section}</h4>`;
 
         let updateStudent = {
             ...student,
@@ -90,8 +94,8 @@
 
 
         // Destructuring of ARRAYS
-        const fruits = ["Apple" , "Banana" , "Grapes"];
-        let [first , second , third] = fruits;
+        const fruits = ["Apple", "Banana", "Grapes"];
+        let [first, second, third] = fruits;
         console.log(first);
         console.log(second);
         console.log(third);
@@ -101,7 +105,7 @@
 
         // Destructuring of NESTED ARRAYS
         const colors = ['Red', ['Green', 'Blue'], 'Yellow'];
-        let [first_ele , [mid1 , mid2], last] = colors
+        let [first_ele, [mid1, mid2], last] = colors
         console.log(first_ele);
         console.log(mid1);
         console.log(mid2);
@@ -112,13 +116,29 @@
 
 
 
-// Array Destructuring with Skipping and Default Values
-const scores = [90, 85, , 70];
-let [firstscore , , thirdscore= 80 , fourthscore] = scores
-console.log(thirdscore);
-// html
-document.getElementById('scores').innerHTML = `<p>First Score: ${firstscore}, Third Score: ${thirdscore}, 
-    Fourt Score: ${fourthscore}</p>`
+        // Array Destructuring with Skipping and Default Values
+        const scores = [90, 85, , 70];
+        let [firstscore, , thirdscore = 80, fourthscore] = scores
+        console.log(thirdscore);
+        // html
+        document.getElementById('scores').innerHTML = `<p>First Score: ${firstscore}, Third Score: ${thirdscore}, 
+            Fourth Score:${fourthscore}</p>`
+
+
+
+
+        // Merging Two Arrays into One Using the Spread Operator and Displaying the Result
+        const primaryColors = ['Red', 'Green'];
+        const secondaryColors = ['Blue', 'Yellow'];
+        const allColors = [
+            ...primaryColors,
+            ...secondaryColors
+        ];
+         let [clr1 , clr2 , clr3 , clr4] = allColors;
+         console.log(clr1);
+        //  html
+        document.getElementById('allColors').innerHTML = `<p>${allColors.join(',')}</p>`
+
     </script>
 </body>
 
