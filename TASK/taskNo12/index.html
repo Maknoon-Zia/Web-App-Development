@@ -1,0 +1,107 @@
+<!-- destructuring of arrays, strings, or objects  -->
+<!-- Spread Operatior -->
+<!-- Import and Export -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task no 12</title>
+</head>
+
+<body>
+    <p style="color: cornflowerblue;">Destructuring of OBJECTS</p>
+    <div id="person"></div>
+    <p style="color: cornflowerblue;">Destructuring of NESTED OBJECT</p>
+    <div id="book"></div>
+    <p style="color: cornflowerblue;">Spread Operator to Copy and Update an Object</p>
+    <div id="student"></div>
+    <p style="color: cornflowerblue;">Spread Operator Example: Update Object Property (Section)</p>
+    <div id="updatedStudent"></div>
+    <p style="color: coral;">Destructuring of ARRAYS</p>
+<div id="fruits"></div>
+<p style="color: coral;">Destructuring of NESTED ARRAYS</p>
+<div id="colors"></div>
+
+    <script>
+
+        // Destructuring of OBJECTS
+        const person = {
+            name: 'Maknoon',
+            age: 19,
+            city: 'Faisalabad'
+        }
+        let { name, age, city } = person;
+        console.log(name);
+        console.log(age);
+        console.log(city);
+        // HTML
+        document.getElementById('person').innerHTML = `<h3>Name: ${name}</h3>` + `<b>Age: ${age}</b>`
+            + `<p>City: ${city}</p>`;
+
+        // Destructuring of NESTED OBJECT
+        const Book = {
+            title: 'Calculus & Analytic Geometry',
+            author: {
+                firstName: 'Noman',
+                secondName: 'Khalid'
+            }
+        }
+        let { title, author: { firstName, secondName } } = Book
+        console.log(title);
+        console.log(firstName);
+        console.log(secondName);
+        // HTML
+        document.getElementById('book').innerHTML = `<h3>Tittle: ${title}</h3>` + `<h4>Author: ${firstName} ${secondName}</h4>`;
+
+
+
+        // Using the Spread Operator to Copy and Update an Object
+        // Spread Operator Example: Update Object Property
+        const student = {
+            stuName: 'Adeel',
+            Class: '10th',
+            section: 'B'
+        };
+        // HTML
+        document.getElementById('student').innerHTML = `<h3>Student Name: ${student.stuName}</h3>` + `<h4>Class: ${student.Class}</h4>` 
+        + `<h4>Section: ${student.section}</h4>`;
+
+        let updateStudent = {
+            ...student,
+            section: 'A'
+        };
+        console.log(updateStudent);
+        // let {section} = updateStudent;
+        // HTML
+        document.getElementById('updatedStudent').innerHTML = `<h4>Section: ${updateStudent.section}</h4>`;
+
+
+
+
+
+        // Destructuring of ARRAYS
+        const fruits = ["Apple" , "Banana" , "Grapes"];
+        let [first , second , third] = fruits;
+        console.log(first);
+        console.log(second);
+        console.log(third);
+        // HTML
+        document.getElementById('fruits').innerHTML = `<h5>${first}</h5>` + `<h5>${second}</h5>` + `<h5>${third}</h5>`;
+
+
+        // Destructuring of NESTED ARRAYS
+        const colors = ['Red', ['Green', 'Blue'], 'Yellow'];
+        let [first_ele , [mid1 , mid2], last] = colors
+        console.log(first_ele);
+        console.log(mid1);
+        console.log(mid2);
+        console.log(last);
+        document.getElementById('colors').innerHTML = `<p>${first_ele}, ${mid1}, ${mid2}, ${last}</p>`;
+    </script>
+</body>
+
+</html>

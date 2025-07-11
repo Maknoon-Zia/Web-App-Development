@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class NO 40</title>
+</head>
+<body>
+    <div id="username"></div>
+    <div id="userage"></div>
+    <script src="./first.js" type="module"></script>
+    <script src="./second.js" type="module"></script>
+
+    <script type="module">   //react based on this line 
+        // Destructure
+        const user = {
+            name : "noor" ,
+            email : "noor@gmail.com" ,
+            password : null
+        }
+        let {name , email , password} = user
+        // let {name , ...data} = user 
+        console.log(name);
+        console.log(email);
+        // spread operator ---------- most imp in JS, catch all remainig data and display
+        let { ...username } = user
+        console.log(username);
+
+
+//  Destructure in array
+        const product = [ "product no 0" , "prduct no 1" , "product no 2" , "prduct no 3" ];
+        let {first , ...second } = product
+        console.log(first);
+        console.log(second);
+
+
+// Destructure in strings
+    const name_ = "javascript"
+    let {firstletter , ...data_} = name_
+    console.log(firstletter);
+    console.log(data_);
+
+
+    //  module
+    // import , export
+    </script>
+</body>
+</html>
