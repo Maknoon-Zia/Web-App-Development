@@ -24,10 +24,13 @@
     <div id="student"></div>
     <p style="color: cornflowerblue;">Spread Operator Example: Update Object Property (Section)</p>
     <div id="updatedStudent"></div>
+    <hr></hr>
     <p style="color: coral;">Destructuring of ARRAYS</p>
 <div id="fruits"></div>
 <p style="color: coral;">Destructuring of NESTED ARRAYS</p>
 <div id="colors"></div>
+<p style="color: coral;">Array Destructuring with Skipping(second score) and Default(third score) Values</p>
+<div id="scores"></div>
 
     <script>
 
@@ -103,7 +106,19 @@
         console.log(mid1);
         console.log(mid2);
         console.log(last);
+        // HTML
         document.getElementById('colors').innerHTML = `<p>${first_ele}, ${mid1}, ${mid2}, ${last}</p>`;
+
+
+
+
+// Array Destructuring with Skipping and Default Values
+const scores = [90, 85, , 70];
+let [firstscore , , thirdscore= 80 , fourthscore] = scores
+console.log(thirdscore);
+// html
+document.getElementById('scores').innerHTML = `<p>First Score: ${firstscore}, Third Score: ${thirdscore}, 
+    Fourt Score: ${fourthscore}</p>`
     </script>
 </body>
 
