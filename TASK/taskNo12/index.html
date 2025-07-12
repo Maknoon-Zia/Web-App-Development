@@ -35,7 +35,13 @@
     <p style="color: coral;">Using <b>Spread Operator</b> to Combine Arrays</p>
     <div id="allColors"></div>
     <hr></hr>
-
+    <p style="color: darkgreen;">Destructuring a String into Individual Characters</p>
+    <div id="language"></div>
+    <p style="color: darkgreen;">String Destructuring with Skipping Characters</p>
+    <div id="react"></div>
+    <div id="framework"></div>
+    <p style="color: darkgreen;">Destructuring Values Returned from a Function</p>
+    <div id="getuserinfo"></div>
     <script>
 
         // Destructuring of OBJECTS
@@ -139,6 +145,40 @@
         //  html
         document.getElementById('allColors').innerHTML = `<p>${allColors.join(',')}</p>`
 
+
+
+
+        // Using Destructuring to Extract Characters from a String in JavaScript
+        const language = 'JS';
+        let [first_chr, second_chr] = language;
+        console.log(first_chr);
+        console.log(second_chr);
+        // HTML
+        document.getElementById('language').innerHTML = `<h4>${first_chr}</h4>` + `<h4>${second_chr}</h4>`
+
+
+
+
+        // Extracting Specific Characters from a String Using Destructuring and Skipping in JavaScript
+        const framework = 'React';
+        let [firstLetter , secondLetter , , fourthLetter] = framework;
+        console.log(firstLetter);
+        // html
+        document.getElementById('react').innerHTML = `<p>${framework}</p>`
+        document.getElementById('framework').innerHTML = `<p>${firstLetter}, ${secondLetter}, ${fourthLetter}</p>`
+
+
+
+
+        // Using Array Destructuring to Extract Return Values from a Function in JavaScript
+        function getUserInfo() {
+            return ['Aizal' , 15]
+        }
+        
+        let [userName , userAge] = getUserInfo()
+        console.log(userName);
+        // HTML
+        document.getElementById('getuserinfo').innerHTML = `<p>${userName} your age is ${userAge}</p>`
     </script>
 </body>
 
