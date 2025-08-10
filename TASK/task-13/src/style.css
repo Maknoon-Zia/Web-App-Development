@@ -1,0 +1,33 @@
+.navbar ul {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+
+}
+.navbar ul li a {
+    text-decoration: none
+}
+.home {
+    background-image: url('./images/bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    padding-inline: 8rem;
+    padding-block: 14rem;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+.home h1{
+    width: 30rem;
+    font-weight: bold;
+    font-size: 3rem;
+}
+.home p{
+    font-weight: bold;
+    font-size: 1.5rem;
+}

@@ -1,0 +1,84 @@
+<!-- Maknoon Zia ( 358006 )-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Student Grade Manager</h1>
+    <input type="text" id="stdName" placeholder="Name">
+    <input type="text" id="stdMarks" placeholder="Marks">
+    <button onclick="addStd()">Add Student</button>
+
+    <h1>Student List:</h1>
+    <div id="stdList"></div>
+    <h2 id="avrg"></h2>
+
+    <script>
+        const students = [];
+
+        function addStd() {
+            const name = document.getElementById('stdName').value.trim();
+            const marks = parseFloat(document.getElementById('stdMarks').value);
+
+            if (!name || isNaN(marks)) {
+                alert("Please enter valid name and marks");
+                return;
+            }
+
+            const STD = { Name: name, Marks: marks };
+            students.push(STD);
+
+            document.getElementById('stdName').value = "";
+            document.getElementById('stdMarks').value = "";
+
+            renderList();
+        }
+
+        function deleteStd(index) {
+            students.splice(index, 1);
+            renderList();
+        }
+
+        function renderList() {
+            const listDiv = document.getElementById('stdList');
+            listDiv.innerHTML = "";
+            let totalMarks = 0;
+
+            students.forEach((student, index) => {
+                const studentDiv = document.createElement('div');
+                studentDiv.style.padding = "5px";
+                studentDiv.style.marginBottom = "5px";
+                studentDiv.style.border = "1px solid #ccc";
+
+                studentDiv.textContent = `Name: ${student.Name} , Marks: ${student.Marks} `;
+
+                if (student.Marks < 40) {
+                    studentDiv.style.backgroundColor = "red";
+                    studentDiv.style.color = "white";
+                }
+
+                const deleteBtn = document.createElement('button');
+                deleteBtn.textContent = "Delete";
+                deleteBtn.style.marginLeft = "10px";
+                deleteBtn.onclick = () => deleteStd(index);
+
+                studentDiv.appendChild(deleteBtn);
+                listDiv.appendChild(studentDiv);
+
+                totalMarks += student.Marks;
+            });
+
+            const average = students.length ? (totalMarks / students.length).toFixed(2) : 0;
+            document.getElementById("avrg").innerHTML = `Average = ${average}`;
+        }
+    </script>
+</body>
+
+</html>
+
+<!-- Maknoon Zia ( 358006 )-->

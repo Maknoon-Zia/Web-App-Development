@@ -1,0 +1,31 @@
+<!-- Cookies
+Storage both are important in front end nd backend -->
+<!-- filter in array -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class no 41</title>
+</head>
+<body>
+    <p id="age"></p>
+    <script>
+        // Cookies ko backend pr kryn gy 
+        // localStorage : 
+        // localStorage.setItem('userData' , 'Maknoon')
+        // localStorage.setItem('email' , 'Maknoon')
+        // localStorage.setItem('password' , 'Maknoon')
+        // localStorage.setItem('role' , 'Maknoon')
+
+        // localStorage.removeItem('userData')
+        // localStorage.clear()
+
+
+        // filter 
+        const ages = [32 , 33, 16 ,40];
+        document.getElementById('age').innerHTML = ages.filter((age)=> age>= 18);
+    </script>
+</body>
+</html>
