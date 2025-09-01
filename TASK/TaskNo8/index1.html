@@ -6,6 +6,7 @@
     <title> Capitalize the First Letter in JS</title>
 </head>
 <body>
+    <div id="text"></div>
     <script>
         // Problem:
         // 1- Capitalize the First Letter in JS
@@ -22,6 +23,7 @@
         }
 
         console.log(capitalizeFirstLetter("hello"));
+        document.getElementById('text').innerHTML = `<h2>${capitalizeFirstLetter("hello")}</h2>`;
 
     </script>
 </body>

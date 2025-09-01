@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Import Export in JS</title>
+    <style>
+        h2 {
+            color: darkblue;
+            border-bottom: 2px solid #ccc;
+            padding-bottom: 5px;
+        }
+
+        p {
+            margin-left: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Math Operations</h2>
+    <div id="add"></div>
+    <div id="subtract"></div>
+    <div id="multiply"></div>
+    <div id="divide"></div>
+    <h2>Greet</h2>
+    <div id="greet"></div>
+    <h2>Greetings</h2>
+    <div id="sayHi"></div>
+    <div id="sayThanks"></div>
+    <div id="sayBye"></div>
+    <h2>Areas</h2>
+    <div id="circle"></div>
+    <div id="square"></div>
+    <div id="triangle"></div>
+    <h2>Students</h2>
+    <ul id="students"></ul>
+    <script type="module">
+        import { add, subtract, multiply, divide } from "./MathUtility.js";
+
+        document.getElementById("add").innerHTML = `<p>ADD 2+3: ${add(2, 3)}</P>`;
+        document.getElementById("subtract").innerHTML = `<p>Subtract 10-5: ${subtract(10, 5)}</P>`;
+        document.getElementById("multiply").innerHTML = `<p>Multiply 2*4: ${multiply(2, 4)}</P>`;
+        document.getElementById("divide").innerHTML = `<p>Divide 20/5: ${divide(20, 5)}</P>`;
+
+
+        // import from greetApp
+        import greet from "./greetApp.js";
+        document.getElementById("greet").innerHTML = `<p> ${greet("Alia")} </p>`;
+
+        // import from mix.js
+        import sayHi, { sayThanks, sayBye } from "./mix.js"
+        document.getElementById("sayHi").innerHTML = `<p> ${sayHi("Jhon")} </p>`;
+        document.getElementById("sayThanks").innerHTML = `<p> ${sayThanks("Jhon")} </p>`;
+        document.getElementById("sayBye").innerHTML = `<p> ${sayBye("Jhon")} </p>`;
+
+        // import from shapesArea.js
+        import * as shapes from "./shapesArea.js";
+        document.getElementById('circle').innerHTML = `<p>Area of Circle with radius(4cm) : ${shapes.areaCircle(4).toFixed(2)}cm<sup>2</sup></p>`;
+        document.getElementById('square').innerHTML = `<p>Area of Square of side(3m) : ${shapes.areaSquare(3).toFixed(2)}m<sup>2</sup></p>`;
+        document.getElementById('triangle').innerHTML = `<p>Area of Triangle with base(4km) and height(6km) : ${shapes.areaTriangle(4, 6).toFixed(2)}km<sup>2</sup></p>`;
+
+
+        // import drom print students 
+        import printStudents from "./printStudents.js";
+        printStudents();
+    </script>
+</body>
+
+</html>

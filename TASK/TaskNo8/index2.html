@@ -6,20 +6,24 @@
     <title>Remove a Character From String in Javascript</title>
 </head>
 <body>
+    <div id="text"></div>
     <script>
         // Problem:
         // 2- Remove a Character From String in Javascript 
         // Input :  (“HelloWorld”)
-        // Output : (“ello”)
+        // Output : (“elloWorld”)
 
         function removingFirstChar(str) {
             if (!str) {
                 return ""
             }
             else {
-                return 
+                return str.slice(1);
             }
         }
+        console.log(removingFirstChar("HelloWorld"));
+        document.getElementById('text').innerHTML = `<h2>${removingFirstChar("HelloWorld")}</h2>`;
+
     </script>
 </body>
 </html>
