@@ -1,0 +1,44 @@
+/* Container for input + eye button */
+.input-container {
+  position: relative;
+  width: 300px; /* same as input width */
+}
+
+/* Style the input itself */
+.input-container input {
+  width: 100%;                 /* take full space of container */
+  padding: 10px 40px 10px 10px; /* add right padding so eye doesn’t overlap text */
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  outline: none;
+  transition: 0.3s;
+}
+
+.input-container input:focus {
+  border-color: #4CAF50;
+  box-shadow: 0 0 8px #4CAF50;
+}
+
+/* Placeholder */
+.input-container input::placeholder {
+  color: gray;
+  font-style: italic;
+}
+
+/* Eye button styling */
+.input-container button {
+  position: absolute;
+  top: 50%;
+  right: -30px;               /*  position inside input */
+  transform: translateY(-50%);
+  background: none;           /* no background */
+  border: none;               /* no border */
+  cursor: pointer;
+  font-size: 18px;            /* icon size */
+  color: #555;                /* icon color */
+}
+
+.input-container button:hover {
+  color: #000;                /* darker on hover */
+}
