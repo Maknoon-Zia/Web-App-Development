@@ -1,0 +1,59 @@
+.app-div {
+    margin: 1.5rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.app-double-div {
+    margin: 1.5rem;
+}
+
+.card {
+    width: 260px;
+    background: rgb(214, 218, 200);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.card-title {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.card-count {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #666;
+}
+
+.card-btn {
+    padding: 10px 18px;
+    font-size: 16px;
+    font-weight: 500;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background: linear-gradient(135deg, #4CAF50, #2E7D32);
+    color: #fff;
+    transition: background 0.3s ease;
+}
+
+.card-btn:hover {
+    background: linear-gradient(135deg, #66BB6A, #388E3C);
+}
+
+.double-button {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
