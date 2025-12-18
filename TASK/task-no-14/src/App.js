@@ -1,5 +1,6 @@
-import CounterCard from "./counter"
+import CounterCard from "./propsCounter"
 import DoubleCounter from "./double";
+import Counter from "./counter";
 import "./style.css"
 
 function App() {
@@ -12,7 +13,7 @@ function App() {
       <div className="app-double-div">
         <DoubleCounter title="Likes/Unlikes" counts={0} button1="like" button2="unlike" />
       </div>
-
+<Counter/>
     </>
   );
 }

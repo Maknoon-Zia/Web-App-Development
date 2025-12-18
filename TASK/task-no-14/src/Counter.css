@@ -1,0 +1,84 @@
+/* Full screen center */
+.counter-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; 
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+
+  /* Beautiful gradient background */
+  background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+/* Card styling */
+.counter-card {
+  background: #ffffffcc;  /* Semi-transparent white */
+  padding: 30px;
+  border-radius: 18px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  width: 300px;
+  backdrop-filter: blur(10px); /* Frosted glass effect */
+}
+
+/* Heading */
+.counter-card h1 {
+  margin-bottom: 10px;
+  font-size: 26px;
+  color: #333;
+}
+
+/* Count number */
+.count {
+  font-size: 42px;
+  font-weight: bold;
+  margin: 20px 0;
+  color: #222;
+}
+
+/* Button group */
+.btn-group {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+/* Base button */
+.btn {
+  flex: 1;
+  padding: 12px;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.25s ease-in-out;
+  color: #fff;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+/* Button colors */
+.increase {
+  background: #4caf50;
+}
+.increase:hover {
+  transform: translateY(-2px);
+  background: #43a047;
+}
+
+.decrease {
+  background: #f44336;
+}
+.decrease:hover {
+  transform: translateY(-2px);
+  background: #e53935;
+}
+
+.reset {
+  background: #2196f3;
+}
+.reset:hover {
+  transform: translateY(-2px);
+  background: #1976d2;
+}

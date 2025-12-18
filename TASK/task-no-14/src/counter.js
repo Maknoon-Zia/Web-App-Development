@@ -1,22 +1,35 @@
-import { useState } from "react"
+import { useState } from "react";
+import "./Counter.css"; // Import CSS file
 
-function CounterCard(props) {
-    const [title] = useState(props.title)
-    const [counts, setCounts] = useState(props.counts)
-    const [button] = useState(props.button)
+function Counter() {
+  const [count, setCount] = useState(0);
 
-    function increase() {
-        setCounts(counts + 1)
-    }
+  function increase() {
+    setCount(count + 1);
+  }
+  function decrease() {
+    setCount(count - 1);
+  }
 
-    return (
-        <div className="card">
-            <h2 className="card-title">{title}</h2>
-            <p className="card-count">Count: {counts}</p>
-            <button className="card-btn" onClick={increase}>
-                {button}
-            </button>
+  return (
+    <div className="counter-container">
+      <div className="counter-card">
+        <h1>Counter</h1>
+        <p className="count">{count}</p>
+        <div className="btn-group">
+          <button className="btn increase" onClick={increase}>
+            +1
+          </button>
+          <button className="btn decrease" onClick={decrease}>
+            -1
+          </button>
+          <button className="btn reset" onClick={() => setCount(0)}>
+            Reset
+          </button>
         </div>
-    )
+      </div>
+    </div>
+  );
 }
-export default CounterCard
+
+export default Counter;
