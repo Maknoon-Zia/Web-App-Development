@@ -1,0 +1,712 @@
+/* ------------------------------
+   GLOBAL COLORS & BODY
+--------------------------------*/
+:root {
+  --primary: #FFCC03;
+  --dark: #0F1016;
+  --white: #FFFFFF;
+  --lightGray: #808288;
+  --cardBorder: #1e1f25;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
+}
+
+/* -----------------------
+   LOGIN PAGE
+------------------------ */
+.login-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 20px;
+}
+
+.login-container::before {
+  content: "";
+  background: url('/images/login-bg.jpg') center/cover no-repeat;
+  position: absolute;
+  inset: 0;
+  opacity: 0.2;
+  z-index: 0;
+}
+
+.login-container::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(15,16,22,0.85);
+  z-index: 1;
+}
+
+.login-card {
+  position: relative;
+  z-index: 2;
+  max-width: 400px;
+  width: 100%;
+  background-color: var(--dark);
+  border: 1px solid var(--cardBorder);
+  border-radius: 20px;
+  padding: 30px;
+  color: var(--white);
+  text-align: center;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+}
+
+.login-card h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.login-card p {
+  color: var(--lightGray);
+  margin-bottom: 20px;
+}
+
+.error {
+  background-color: rgba(255, 0, 0, 0.1);
+  color: #f87171;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  font-size: 0.9rem;
+}
+
+.login-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.login-card label {
+  text-align: left;
+  font-size: 0.9rem;
+  color: var(--lightGray);
+}
+
+.login-card input {
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid var(--cardBorder);
+  background-color: transparent;
+  color: var(--white);
+  outline: none;
+}
+
+.login-card input::placeholder {
+  color: var(--lightGray);
+}
+
+.login-card button[type="submit"] {
+  padding: 12px;
+  border-radius: 12px;
+  border: none;
+  background-color: var(--primary);
+  color: var(--dark);
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.login-card button[type="submit"]:hover:not(:disabled) {
+  opacity: 0.9;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.divider::before, .divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--cardBorder);
+}
+
+.divider span {
+  margin: 0 10px;
+  color: var(--lightGray);
+  font-size: 0.9rem;
+}
+
+.social-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.btn-social {
+  flex: 1 1 45%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid var(--cardBorder);
+  background-color: transparent;
+  color: var(--white);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-social:hover {
+  background-color: #15161c;
+}
+
+.signup-text {
+  font-size: 0.9rem;
+  color: var(--lightGray);
+  text-align: center;
+}
+
+.signup-text a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.signup-text a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Login */
+@media (max-width: 480px) {
+  .login-card {
+    padding: 20px;
+  }
+  .login-card h1 {
+    font-size: 1.6rem;
+  }
+  .btn-social {
+    flex: 1 1 100%;
+  }
+}
+/* -----------------------
+   SIGNUP PAGE
+------------------------ */
+.signup {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+  background-image: url('/images/login-bg.jpg');
+}
+
+.signup-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(15,16,22,0.85);
+  z-index: 0;
+}
+
+.signup-card {
+  position: relative;
+  z-index: 1;
+  max-width: 420px;
+  width: 100%;
+  padding: 40px;
+  border-radius: 20px;
+  background: rgba(15,16,22,0.95);
+  border: 1px solid var(--cardBorder);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.7);
+  text-align: center;
+  color: var(--white);
+}
+
+.signup-card h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.signup-card p {
+  color: var(--lightGray);
+  margin-bottom: 20px;
+}
+
+.signup-form input {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  border: 1px solid var(--cardBorder);
+  background: rgba(15,16,22,0.8);
+  color: var(--white);
+}
+
+.signup-form input::placeholder {
+  color: var(--lightGray);
+}
+
+.signup .btn-primary {
+  width: 100%;
+  padding: 14px;
+  border-radius: 12px;
+  border: none;
+  background: var(--primary);
+  color: var(--dark);
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.signup .btn-primary:hover {
+  opacity: 0.95;
+}
+
+.signup-footer {
+  color: var(--lightGray);
+  font-size: 0.9rem;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.signup-footer a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.signup-footer a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Signup */
+@media (max-width: 500px) {
+  .signup-card {
+    padding: 30px 20px;
+  }
+  .signup-card h1 {
+    font-size: 2rem;
+  }
+}
+
+/* -----------------------
+   LANDING PAGE
+------------------------ */
+.landing-container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 15px;
+  overflow-x: hidden;
+}
+
+.landing-container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(15,16,22,0.85);
+  z-index: 1;
+}
+
+.landing-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: #FFFFFF;
+  padding: 30px 20px;
+  border-radius: 10px;
+  max-width: 100%;
+  word-wrap: break-word;
+}
+
+.landing-content h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.landing-content p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.landing-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.btn-primary, .btn-secondary {
+  padding: 12px 25px;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: background 0.3s ease, transform 0.2s ease;
+  text-decoration: none;
+  text-align: center;
+  min-width: 120px;
+}
+
+.btn-primary {
+  background-color: #FFCC03;
+  color: #0F1016;
+}
+
+.btn-primary:hover {
+  background-color: #e6b800;
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background-color: #0F1016;
+  color: #FFFFFF;
+}
+
+.btn-secondary:hover {
+  background-color: #12131b;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .landing-content h1 {
+    font-size: 2rem;
+  }
+  .landing-content p {
+    font-size: 1rem;
+  }
+  .landing-buttons {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
+  .landing-buttons a {
+    width: 90%;
+  }
+}
+
+/* -----------------------
+   DASHBOARD
+------------------------ */
+.dashboard {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--dark);
+  color: var(--white);
+  overflow-x: hidden;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 15px;
+  background-color: var(--cardBorder);
+  border-bottom: 1px solid #2a2b33;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.navbar h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.dashboard-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding: 15px;
+}
+
+.sidebar {
+  flex-shrink: 0;
+  width: 220px;
+  background-color: var(--cardBorder);
+  border-radius: 16px;
+  padding: 15px;
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar li {
+  margin-bottom: 12px;
+}
+
+.sidebar li a {
+  display: block;
+  padding: 8px 10px;
+  border-radius: 12px;
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.2s;
+}
+
+.sidebar li a:hover {
+  background-color: var(--primary);
+  color: var(--dark);
+}
+
+.main-content {
+  flex: 1;
+  background-color: var(--cardBorder);
+  border-radius: 16px;
+  padding: 20px;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.main-content h3 {
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+/* Booking cards grid */
+.booking-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 15px;
+}
+
+.booking-card {
+  background-color: var(--dark);
+  border-radius: 16px;
+  padding: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  border: 1px solid var(--cardBorder);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.booking-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.4);
+}
+
+.booking-card h4 {
+  margin: 0 0 6px;
+  font-size: 1rem;
+  color: var(--primary);
+}
+
+.booking-card p {
+  font-size: 0.8rem;
+  color: var(--lightGray);
+  margin: 2px 0;
+}
+
+.booking-img-container {
+  width: 100%;
+  height: 120px;
+  margin-bottom: 10px;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.booking-car-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.booking-car-img:hover {
+  transform: scale(1.05);
+}
+
+/* Dashboard responsive */
+@media (max-width: 900px) {
+  .dashboard-content {
+    flex-direction: column;
+  }
+  .sidebar {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  .booking-cards {
+    gap: 15px;
+  }
+}
+
+@media (max-width: 500px) {
+  .navbar h2 {
+    font-size: 1.3rem;
+  }
+  .main-content h3 {
+    font-size: 1.1rem;
+  }
+  .booking-card h4 {
+    font-size: 0.95rem;
+  }
+  .booking-card p {
+    font-size: 0.75rem;
+  }
+  .login-card, .signup-card, .profile-card, .booking-card {
+    padding: 20px;
+  }
+  .landing-content {
+    padding: 15px;
+  }
+  .landing-content h1 {
+    font-size: 1.8rem;
+  }
+  .landing-content p {
+    font-size: 0.95rem;
+  }
+}
+
+/* -----------------------
+   PROFILE
+------------------------ */
+.profile-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--dark);
+  padding: 15px;
+}
+
+.profile-card {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 420px;
+  background-color: var(--dark);
+  border: 1px solid var(--cardBorder);
+  border-radius: 20px;
+  padding: 25px;
+  color: var(--white);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+}
+
+.profile-card h2 {
+  margin: 0;
+  font-size: 1.6rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.profile-card input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 12px;
+  border: 1px solid var(--cardBorder);
+  background-color: transparent;
+  color: var(--white);
+}
+
+.profile-card button {
+  width: 100%;
+  padding: 12px;
+  border-radius: 12px;
+  border: none;
+  background-color: var(--primary);
+  color: var(--dark);
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 5px;
+}
+
+.profile-card button:hover:not(:disabled) {
+  opacity: 0.9;
+}
+
+/* -----------------------
+   CREATE BOOKING
+------------------------ */
+.booking-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--dark);
+  padding: 15px;
+}
+
+.booking-card {
+  max-width: 420px;
+  width: 100%;
+  background: rgba(15,16,22,0.95);
+  border: 1px solid var(--cardBorder);
+  border-radius: 20px;
+  padding: 25px;
+  color: var(--white);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+  text-align: center;
+}
+
+.booking-card h2 {
+  font-size: 1.8rem;
+  margin-bottom: 8px;
+}
+
+.booking-card p {
+  color: var(--lightGray);
+  margin-bottom: 15px;
+}
+
+.booking-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.booking-form input {
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid var(--cardBorder);
+  background: transparent;
+  color: var(--white);
+}
+
+.booking-form input::placeholder {
+  color: var(--lightGray);
+}
+
+.booking-form .btn-primary {
+  margin-top: 8px;
+  padding: 12px;
+  border-radius: 12px;
+  border: none;
+  background: var(--primary);
+  color: var(--dark);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.booking-form .btn-primary:hover {
+  opacity: 0.9;
+}
+
+.back-link {
+  display: inline-block;
+  margin-top: 15px;
+  color: var(--primary);
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
