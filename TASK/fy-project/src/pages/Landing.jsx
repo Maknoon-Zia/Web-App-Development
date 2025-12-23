@@ -1,9 +1,10 @@
 import { Link } from "react-router-dom";
-import bgImage from "../images/login-bg.jpg"; 
+import "../index.css";
 
 export default function Landing() {
   return (
-    <div className="landing-container" style={{ backgroundImage: `url(${bgImage})` }}>
+    <div className="landing-container">
+      <div className="landing-overlay"></div>
       <div className="landing-content">
         <h1>Car Booking App</h1>
         <p>Book luxury cars easily and manage your bookings.</p>

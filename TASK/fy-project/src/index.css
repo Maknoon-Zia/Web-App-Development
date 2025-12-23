@@ -29,12 +29,18 @@ body {
   justify-content: center;
   align-items: center;
   position: relative;
+   background: url(/images/new.png) center/cover no-repeat;
   padding: 20px;
 }
-
+.login-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(15,16,22,0.85);
+  z-index: 1;
+}
 .login-container::before {
   content: "";
-  background: url('/images/login-bg.jpg') center/cover no-repeat;
+  background: url(/images/new.png) center/cover no-repeat;
   position: absolute;
   inset: 0;
   opacity: 0.2;
@@ -206,7 +212,7 @@ body {
   justify-content: center;
   background-size: cover;
   background-position: center;
-  background-image: url('/images/login-bg.jpg');
+  background-image: url(/images/new.png);
 }
 
 .signup-overlay {
@@ -308,8 +314,14 @@ body {
   position: relative;
   padding: 15px;
   overflow-x: hidden;
+  background: url(/images/new.png) center/cover no-repeat;
 }
-
+.landing-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(15,16,22,0.85);
+  z-index: 1;
+}
 .landing-container::before {
   content: "";
   position: absolute;
