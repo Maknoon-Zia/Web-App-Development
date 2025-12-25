@@ -1,32 +1,40 @@
 import { useEffect, useState } from "react";
 import { doc, getDoc, updateDoc } from "firebase/firestore";
 import { auth, db } from "../firebase/firebaseConfig";
-
+import { useNavigate } from "react-router-dom";
 
 export default function Profile() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState(""); // phone field
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
-    const fetchProfile = async () => {
-      try {
-        const ref = doc(db, "users", auth.currentUser.uid);
-        const snap = await getDoc(ref);
+    const unsubscribe = auth.onAuthStateChanged((user) => {
+      if (!user) return;
 
-        if (snap.exists()) {
-          setName(snap.data().name || "");
-          setEmail(snap.data().email || auth.currentUser.email);
+      const fetchProfile = async () => {
+        setLoading(true);
+        try {
+          const snap = await getDoc(doc(db, "users", user.uid));
+          if (snap.exists()) {
+            setName(snap.data().name || "");
+            setEmail(snap.data().email || user.email);
+            setPhone(snap.data().phone || "");
+          }
+        } catch (err) {
+          console.error("Profile fetch error:", err);
+        } finally {
+          setLoading(false);
         }
-      } catch (err) {
-        console.error("Profile fetch error:", err);
-      } finally {
-        setLoading(false);
-      }
-    };
+      };
 
-    fetchProfile();
+      fetchProfile();
+    });
+
+    return () => unsubscribe();
   }, []);
 
   const updateProfile = async () => {
@@ -39,6 +47,7 @@ export default function Profile() {
       setSaving(true);
       await updateDoc(doc(db, "users", auth.currentUser.uid), {
         name,
+        phone,
       });
       alert("Profile updated successfully");
     } catch (err) {
@@ -50,7 +59,11 @@ export default function Profile() {
   };
 
   if (loading) {
-    return <p style={{ color: "#fff", textAlign: "center" }}>Loading profile...</p>;
+    return (
+      <div className="loader-container">
+        <div className="loader"></div>
+      </div>
+    );
   }
 
   return (
@@ -70,8 +83,24 @@ export default function Profile() {
         <label>Email</label>
         <input type="email" value={email} disabled />
 
+        <label>Phone</label>
+        <input
+          type="text"
+          value={phone}
+          onChange={(e) => setPhone(e.target.value)}
+          placeholder="Enter your phone number"
+        />
+
         <button onClick={updateProfile} disabled={saving}>
           {saving ? "Saving..." : "Update Profile"}
+        </button>
+
+        <button
+          className="btn-back"
+          onClick={() => navigate("/dashboard")}
+          style={{ marginTop: "10px" }}
+        >
+          Back to Dashboard
         </button>
       </div>
     </div>
