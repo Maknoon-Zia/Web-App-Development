@@ -3,7 +3,7 @@ import "../index.css";
 
 export default function Landing() {
   return (
-    <div className="landing-container">
+    <div className="landing-container" style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/images/new.png)` }}>
       <div className="landing-overlay"></div>
       <div className="landing-content">
         <h1>Car Booking App</h1>

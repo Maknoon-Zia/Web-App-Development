@@ -12,7 +12,7 @@ export default function Signup() {
   };
 
   return (
-    <div className="signup">
+    <div className="signup" style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/images/new.png)` }}>
       <div className="signup-overlay" />
       <div className="signup-card">
         <h1>Create Account</h1>

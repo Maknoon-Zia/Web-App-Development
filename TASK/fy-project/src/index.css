@@ -29,29 +29,24 @@ body {
   justify-content: center;
   align-items: center;
   position: relative;
-   background: url(/images/new.png) center/cover no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   padding: 20px;
 }
+
 .login-overlay {
   position: absolute;
-  inset: 0;
-  background: rgba(15,16,22,0.85);
+  inset: 2;
+  background: rgba(21, 22, 27, 0.85);
   z-index: 1;
-}
-.login-container::before {
-  content: "";
-  background: url(/images/new.png) center/cover no-repeat;
-  position: absolute;
-  inset: 0;
-  opacity: 0.2;
-  z-index: 0;
 }
 
 .login-container::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(15,16,22,0.85);
+  background: rgba(21, 22, 27, 0.85);
   z-index: 1;
 }
 
@@ -66,7 +61,7 @@ body {
   padding: 30px;
   color: var(--white);
   text-align: center;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
 }
 
 .login-card h1 {
@@ -135,7 +130,8 @@ body {
   margin: 20px 0;
 }
 
-.divider::before, .divider::after {
+.divider::before,
+.divider::after {
   content: '';
   flex: 1;
   height: 1px;
@@ -194,13 +190,16 @@ body {
   .login-card {
     padding: 20px;
   }
+
   .login-card h1 {
     font-size: 1.6rem;
   }
+
   .btn-social {
     flex: 1 1 100%;
   }
 }
+
 /* -----------------------
    SIGNUP PAGE
 ------------------------ */
@@ -212,13 +211,13 @@ body {
   justify-content: center;
   background-size: cover;
   background-position: center;
-  background-image: url(/images/new.png);
+  background-repeat: no-repeat;
 }
 
 .signup-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(15,16,22,0.85);
+  background: rgba(21, 22, 27, 0.85);
   z-index: 0;
 }
 
@@ -229,9 +228,9 @@ body {
   width: 100%;
   padding: 40px;
   border-radius: 20px;
-  background: rgba(15,16,22,0.95);
+  background: rgba(15, 16, 22, 0.95);
   border: 1px solid var(--cardBorder);
-  box-shadow: 0 20px 50px rgba(0,0,0,0.7);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7);
   text-align: center;
   color: var(--white);
 }
@@ -252,7 +251,7 @@ body {
   margin-bottom: 20px;
   border-radius: 12px;
   border: 1px solid var(--cardBorder);
-  background: rgba(15,16,22,0.8);
+  background: rgba(15, 16, 22, 0.8);
   color: var(--white);
 }
 
@@ -293,12 +292,13 @@ body {
 }
 
 /* Responsive Signup */
-@media (max-width: 500px) {
+@media (max-width: 480px) {
   .signup-card {
-    padding: 30px 20px;
+    padding: 80px;
   }
+
   .signup-card h1 {
-    font-size: 2rem;
+    font-size: 1.6rem;
   }
 }
 
@@ -314,19 +314,23 @@ body {
   position: relative;
   padding: 15px;
   overflow-x: hidden;
-  background: url(/images/new.png) center/cover no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
+
 .landing-overlay {
   position: absolute;
-  inset: 0;
-  background: rgba(15,16,22,0.85);
+  inset: 1;
+  background: rgba(21, 22, 27, 0.85);
   z-index: 1;
 }
+
 .landing-container::before {
   content: "";
   position: absolute;
   inset: 0;
-  background-color: rgba(15,16,22,0.85);
+  background: rgba(21, 22, 27, 0.85);
   z-index: 1;
 }
 
@@ -358,7 +362,8 @@ body {
   gap: 15px;
 }
 
-.btn-primary, .btn-secondary {
+.btn-primary,
+.btn-secondary {
   padding: 12px 25px;
   font-weight: bold;
   border-radius: 8px;
@@ -392,14 +397,17 @@ body {
   .landing-content h1 {
     font-size: 2rem;
   }
+
   .landing-content p {
     font-size: 1rem;
   }
+
   .landing-buttons {
     flex-direction: column;
     width: 100%;
     align-items: center;
   }
+
   .landing-buttons a {
     width: 90%;
   }
@@ -550,10 +558,12 @@ body {
   .dashboard-content {
     flex-direction: column;
   }
+
   .sidebar {
     width: 100%;
     margin-bottom: 15px;
   }
+
   .booking-cards {
     gap: 15px;
   }
@@ -563,24 +573,34 @@ body {
   .navbar h2 {
     font-size: 1.3rem;
   }
+
   .main-content h3 {
     font-size: 1.1rem;
   }
+
   .booking-card h4 {
     font-size: 0.95rem;
   }
+
   .booking-card p {
     font-size: 0.75rem;
   }
-  .login-card, .signup-card, .profile-card, .booking-card {
+
+  .login-card,
+  .signup-card,
+  .profile-card,
+  .booking-card {
     padding: 20px;
   }
+
   .landing-content {
     padding: 15px;
   }
+
   .landing-content h1 {
     font-size: 1.8rem;
   }
+
   .landing-content p {
     font-size: 0.95rem;
   }
@@ -659,12 +679,12 @@ body {
 .booking-card {
   max-width: 420px;
   width: 100%;
-  background: rgba(15,16,22,0.95);
+  background: rgba(15, 16, 22, 0.95);
   border: 1px solid var(--cardBorder);
   border-radius: 20px;
   padding: 25px;
   color: var(--white);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
   text-align: center;
 }
 
